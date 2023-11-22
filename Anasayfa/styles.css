@@ -1,0 +1,65 @@
+html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#C49D33, #712471, 180deg);
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 0px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: #0000;
+    width: auto;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    display: flex;
+    padding: 0 30px 0 0px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Inter;
+    font-style: normal;
+}
+
+.navbar a:hover {
+    text-decoration: underline; 
+}
+
+#compec_ltd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#compec_ltd img {
+    width: 250px;
+}
+
+#logo_exp {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 100px;
+}
