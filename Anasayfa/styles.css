@@ -17,12 +17,11 @@ body {
 }
 
 .instalogo {
-    width: 30px;
+    width: 35px;
     height: auto;
-    margin-top: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    position: absolute;
+    right: 20px;
+    top: 13px;
 }
 
 .instalogo:hover {
