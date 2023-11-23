@@ -107,3 +107,14 @@ footer {
 
     }
 }
+
+
+/*
+Üstteki kısım her sayfada olacak
+Aşasğısı anasayfa özel
+*/
+
+.beyazlogo {
+    height: 400px;
+    width: auto;
+}
