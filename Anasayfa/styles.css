@@ -110,3 +110,24 @@ Aşasğısı anasayfa özel
     text-align: center;
     letter-spacing: 1px;
 }
+#main_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#left_text {
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+.beyaz_text {
+    width: 50%;
+    margin-bottom: -100px;
+}
+#main_section {
+    display: flex;
+}
+#left_text {
+    display: flex;
+    flex-direction: column;
+}
