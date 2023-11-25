@@ -99,6 +99,10 @@ Aşasğısı anasayfa özel
     padding-top: 8%;
 }
 
+.beyaz_yazi {
+    width: 70%;
+}
+
 .nedir {
     color: #fff;
     font-size: 20px;
@@ -106,23 +110,28 @@ Aşasğısı anasayfa özel
     text-align: center;
     letter-spacing: 1px;
 }
+
 .nedir {
     margin: 5%;
     margin-top: -140px;
 }
+
 #main_left_part {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#row {
     display: flex;
     flex-direction: row;
 }
-.beyaz_yazi {
-    width: 40%;
-}
+
 #bbo_logo {
     width: 40%;
     height: 40%;
 }
+
 .btn {
     display: block;
     font-size: 28px;
@@ -132,5 +141,5 @@ Aşasğısı anasayfa özel
     padding: 24px 18px;
     border-radius: 14px;
     color: #fff;
-    background-color: #712471
+    background-color: #712471
 }
