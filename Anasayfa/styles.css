@@ -92,11 +92,6 @@ footer {
 Üstteki kısım her sayfada olacak
 Aşasğısı anasayfa özel
 */
-
-.beyazlogo {
-    width: 80%;
-}
-
 .nedir {
     width: 40%;
     text-align: center;
@@ -106,24 +101,32 @@ Aşasğısı anasayfa özel
     text-align: center;
     letter-spacing: 1px;
 }
-#main_left_part {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.beyazlogo {
+    width: 80%;
 }
-#row {
-    display: flex;
-    flex-direction: row;
-}
+
 .beyaz_yazi {
     width: 40%;
 }
 
+#bbo_white_logo  {
+    width: 600px;
+}
+
+#main_section {
+
+}
+
+#section_a {
+
+}
 
 
+#section_b {
 
-#bbo_logo {
-    width: 40%;
-    height: 40%;
+}
+
+.btn {
+    margin-top: 20px;
 }
