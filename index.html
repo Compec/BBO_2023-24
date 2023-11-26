@@ -14,7 +14,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a  href="/Anasayfa/index.html">Anasayfa</a></li>
+                    <!--<li><a  href="/Anasayfa/index.html">Anasayfa</a></li>-->
                     <li><a  href="/Adaylar/index.html">Adaylar</a></li>
                 </ul>
             </nav>
@@ -38,5 +38,38 @@
                 <br> Etkinliğin tüm hakları Compec'e aittir 
                 ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</h3>           
         </footer>
+
+        <script>
+            // Function to set the angle of the linear gradient
+            function setGradientAngle(degrees) {
+                document.body.style.background = `linear-gradient(${degrees}deg, black, #712471, black)`;
+            }
+    
+            // Function to animate the gradient rotation
+            function animateGradientRotation(duration, startAngle, endAngle) {
+                const startTime = Date.now();
+    
+                function update() {
+                    const currentTime = Date.now();
+                    const progress = (currentTime - startTime) / duration;
+                    const currentAngle = startAngle + (endAngle - startAngle) * progress;
+    
+                    setGradientAngle(currentAngle);
+    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                    else {
+                    // Restart the animation when it reaches the end
+                    animateGradientRotation(duration, startAngle, endAngle);
+                }
+                }
+    
+                update();
+            }
+    
+            // Example: Rotate the gradient 360 degrees in 8 seconds
+            animateGradientRotation(8000, 135, 495); // 495 = 135 + 360
+        </script>
     </body>
 </html>

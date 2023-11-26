@@ -6,8 +6,10 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, black, #712471, black);
-    height: 200vh;
+    height: 400vh;
 }
+
+
 
 .logo img {
     width: 50px;
