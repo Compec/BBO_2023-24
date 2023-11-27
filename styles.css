@@ -111,12 +111,10 @@ Aşasğısı anasayfa özel
     line-height: 30px;
     text-align: center;
     letter-spacing: 1px;
-}
-
-.nedir {
     margin: 5%;
     margin-top: -140px;
 }
+
 
 #main_left_part {
     display: flex;
@@ -163,3 +161,28 @@ Aşasğısı anasayfa özel
     color: #fff;
 }
 
+/*
+MOBİL
+*/
+
+@media screen and (max-width: 790px) {
+    header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: #101;
+        padding: 0px 30px 0 30px;
+    }
+    
+    .nedir {
+        margin-top: -22%;
+        margin-right: 2%;
+    }
+
+    .beyazlogo {
+        display: none;
+    }
+    .beyaz_yazi {
+        width: 90%;
+    }
+}
