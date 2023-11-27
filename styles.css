@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, black, #712471, black);
-    height: 400vh;
+    height: 200vh;
+    background-repeat: no-repeat;
 }
 
 
@@ -161,11 +162,19 @@ Aşasğısı anasayfa özel
     color: #fff;
 }
 
+.garagara {
+    display: flex;
+    justify-content: space-between;
+}
 /*
 MOBİL
 */
 
 @media screen and (max-width: 790px) {
+    body {
+        background-repeat: no-repeat;
+
+    }
     header {
         display: flex;
         justify-content: flex-start;
@@ -179,10 +188,21 @@ MOBİL
         margin-right: 2%;
     }
 
+
     .beyazlogo {
         display: none;
     }
     .beyaz_yazi {
         width: 90%;
+    }
+    #logo_exp {
+        color: #FFF;
+        text-align: center;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 0 40px;
     }
 }
