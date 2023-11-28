@@ -29,7 +29,7 @@
                             gösterişli ödül gecesidir.
                         </p>
                 </div>
-                <img class="beyazlogo" src="/assets/beyaz.png" alt="BBO" >
+                <img class="beyazlogo" src="/assets/bbologo.svg" alt="BBO" >
             </div>  
             <div class="garagara">      
             <button class="btn"><a href="vote.html">Şimdi Oyla!</a></button>      
@@ -41,11 +41,23 @@
         </footer>
         </div>
 
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 200vh;
+                background: linear-gradient(var(--gradient-angle), black, #712471, black);
+                background-size: 100% 240%;
+            }
+        </style>
+
+
         <script>
             // Function to set the angle of the linear gradient
             function setGradientAngle(degrees) {
-                document.body.style.background = `linear-gradient(${degrees}deg, black, #712471, black)`;
-            }
+            document.documentElement.style.setProperty('--gradient-angle', `${degrees}deg`);
+        }
     
             // Function to animate the gradient rotation
             function animateGradientRotation(duration, startAngle, endAngle) {
@@ -66,12 +78,13 @@
                     animateGradientRotation(duration, startAngle, endAngle);
                 }
                 }
-    
+                
                 update();
             }
-    
+            console.log(document.body.style.background)
             // Example: Rotate the gradient 360 degrees in 8 seconds
             animateGradientRotation(8000, 135, 495); // 495 = 135 + 360
+            
         </script>
     </body>
 </html>
