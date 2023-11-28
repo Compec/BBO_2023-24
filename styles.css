@@ -63,8 +63,8 @@ nav a:hover {
 footer {
     color: white;
     width: 100%;
-    position: absolute;
-    bottom: -700px;
+    /*position: absolute;*/
+    /*bottom: -700px;*/
     width: 100%;
     text-align: center;
 }
@@ -99,7 +99,8 @@ Aşasğısı anasayfa özel
 .beyazlogo {
     width: 25%;
     align-self: center;
-    padding-top: 8%;
+    /*padding-top: 8%;*/
+    padding: 0px 36px;
 }
 
 .beyaz_yazi {
@@ -112,8 +113,8 @@ Aşasğısı anasayfa özel
     line-height: 30px;
     text-align: center;
     letter-spacing: 1px;
-    margin: 5%;
-    margin-top: -140px;
+    /*margin: 5%;*/
+    /*margin-top: -140px;*/
 }
 
 
@@ -126,6 +127,8 @@ Aşasğısı anasayfa özel
 #row {
     display: flex;
     flex-direction: row;
+    margin-top: 36px;
+    padding: 0px 24px;
 }
 
 #bbo_logo {
@@ -138,7 +141,7 @@ Aşasğısı anasayfa özel
     font-size: 28px;
     font-weight: bold;
     border: 1px #712471 solid;
-    margin: 75px auto;
+    margin: 60px auto;
     padding: 24px 18px;
     border-radius: 14px;
     color: #fff;
@@ -184,8 +187,8 @@ MOBİL
     }
     
     .nedir {
-        margin-top: -22%;
-        margin-right: 2%;
+        /*margin-top: -22%;
+        margin-right: 2%;*/
     }
 
 
