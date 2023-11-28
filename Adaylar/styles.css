@@ -86,7 +86,8 @@ footer {
     border: 5px solid #5e4b00;
     border-radius: 50px;
     background: rgb(21, 1, 18);
-    width: 60%;
+    width: 80%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
@@ -101,7 +102,12 @@ footer {
     justify-content: center;
     margin-top: 25px;
 }
-
+.tripleimagecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
 .doubleimagecontainer {
     display: flex;
     flex-direction: row;
@@ -120,7 +126,7 @@ footer {
 }
 
 .adaygorseli {
-    width: 23vw;
+    width: 21vw;
     border-radius: 10%;
     animation: adaygorselleri-reverse 0.7s forwards;
 }
