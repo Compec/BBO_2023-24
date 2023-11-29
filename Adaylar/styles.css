@@ -30,7 +30,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     background: #101;
-    padding: 0px 30px 0 30px;
+    padding: 0px 15px 0px 15px;
 }
 
 nav ul {
@@ -69,7 +69,8 @@ footer {
 }
 
 .compeclogo {
-    width: 250px;
+    width: 30%;
+    margin-bottom: -80px;
 }
 
 #logo_exp {
@@ -166,14 +167,12 @@ footer {
     }
 }
 @media (max-width: 429px) {
-    body {
-        height: 200vh;
-    }
+
     .adayismi {
         font-size: 1rem;
     }
     .kategoribasligi {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
         font-weight: bold;
     }
