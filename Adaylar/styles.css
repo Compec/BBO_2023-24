@@ -1,13 +1,14 @@
 html {
     font-family: Inter, sans-serif;
 }
-
+/*
 body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, black, #712471, black);
     height: 100%;
 }
+*/
 
 .logo img {
     width: 50px;
@@ -167,5 +168,13 @@ footer {
 @media (max-width: 429px) {
     body {
         height: 200vh;
+    }
+    .adayismi {
+        font-size: 1rem;
+    }
+    .kategoribasligi {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold;
     }
 }
