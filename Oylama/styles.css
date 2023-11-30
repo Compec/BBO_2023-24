@@ -5,7 +5,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, black, #712471, black);
+    /*background: linear-gradient(135deg, black, #712471, black);*/
+    background-color: #C49D33;
     height: 100%;
 }
 
