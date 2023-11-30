@@ -223,3 +223,56 @@ MOBİL
         padding: 0 40px;
     }
 }
+
+/* Mobile Navbar */
+nav > #nav-btn, nav > #nav-check {
+    display: none;
+}
+
+@media screen and (max-width: 790px) {
+    nav > #nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 8px;
+    }
+    nav > #nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    nav > #nav-btn > label:hover, nav  #nav-check:checked ~ #nav-btn > label {
+        cursor: pointer;
+      }
+      nav > #nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+      nav > #nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #101;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: -40px;
+      }
+      nav > #nav-links > li {
+        display: block;
+        width: 80%;
+        margin-left: 50px;
+        font-size: 3em;
+      }
+      nav > #nav-check:not(:checked) ~ #nav-links {
+        height: 0px;
+      }
+      nav > #nav-check:checked ~ #nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+}
