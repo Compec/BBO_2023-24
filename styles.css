@@ -89,12 +89,20 @@ footer {
     height: auto;  
     
 }
-@media (max-width: 430px) {
+@media (max-width: 667px) {
     .peplogo {
         width: 250px;
               
     }
 }
+@media (max-width: 340px) {
+    .peplogo {
+        width: 240px;
+        height: auto;  
+        
+    }
+}
+
 
 
 
