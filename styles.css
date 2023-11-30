@@ -149,6 +149,7 @@ Aşasğısı anasayfa özel
 
 .btn:hover {
     display: block;
+    cursor: pointer;
     font-size: 28px;
     font-weight: bold;
     border: 2px #C49D33 solid;
@@ -160,7 +161,7 @@ Aşasğısı anasayfa özel
 }
 
 
-.btn a {
+.btn {
     text-decoration: none;
     color: #fff;
 }
