@@ -97,10 +97,11 @@ footer {
     position: relative;
     color: rgb(226, 226, 226);
     font-size: 3vw;
-    font-family: Gotham;
+    font-family: Inter;
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    
 }
 .tripleimagecontainer {
     display: flex;
@@ -144,8 +145,7 @@ footer {
 
 .adayismi {
     color: white;
-    font-size: 1.5vw;
-    font-weight: bold;
+    font-size: 1.3vw;  
     margin-top: 9%;
 }
 
