@@ -91,11 +91,11 @@ footer {
 }
 @media (max-width: 430px) {
     .peplogo {
-        width: 300px;
-        height: auto;  
-        
+        width: 250px;
+              
     }
 }
+
 
 
 #logo_exp {
