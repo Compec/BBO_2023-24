@@ -110,6 +110,7 @@ footer {
     margin-top: 2%;
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
 }
 .doubleimagecontainer {
     display: flex;
