@@ -134,6 +134,7 @@ footer {
     width: 90%;
     border-radius: 10%;
     animation: adaygorselleri-reverse 0.7s forwards;
+    object-fit: fill;
 }
 
 .adaygorseli:hover {
