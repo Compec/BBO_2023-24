@@ -118,10 +118,12 @@ footer {
     justify-content: space-evenly;
     margin-top: 4%;
     margin-bottom: 3%;
+    align-items: center;
 }
 .singleimagecontainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .imgcontainer {
     display: flex;
