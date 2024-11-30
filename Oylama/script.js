@@ -7,9 +7,6 @@ function startForm() {
     document.getElementById('nextButton').disabled = false;
 }
 
-var currentDate = new Date().toLocaleString();
-document.getElementById('currentDate').value = currentDate;
-
 function navigate(direction) {
     const currentQuestion = document.getElementById('question' + currentStep);
 
