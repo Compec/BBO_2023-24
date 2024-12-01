@@ -1,5 +1,5 @@
 let currentStep = 1;
-const totalSteps = 17;
+const totalSteps = 18;
 
 function startForm() {
     document.getElementById('welcomePage').classList.remove('active');
