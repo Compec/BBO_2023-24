@@ -40,763 +40,121 @@
                     <li><a  href="/index.html">Anasayfa</a></li>
                     <li><a  href="/Adaylar/index.html">Adaylar</a></li>
                     <!-- <li><a  href="/Oylama/index.html">Oylama</a></li> -->
-                    <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126" target="_blank">Bilet Al!</a></li>
+                    <li><a  href="https://www.biletimgo.com/etkinlik/11-bogazici-bilisim-odulleri-5315">Bilet Al!</a></li>
                 </ul>
             </nav>
             <!-- <a href = "https://www.instagram.com/bogazicibilisimodulleri/" target = "_blank"><img  class = "instalogo" src="/assets/instagram.png" alt="instagram" ></a> -->
         </header>
 
-        <section id="form">
-          <div class="container active" id="welcomePage">
-            <div>
-                <br><br><br><br><br>
-                <h2>BBÖ Oylamasına Hoş Geldiniz! 🌟</h2>
-                <p>Bugün size birkaç harika kategori ve ünlü soracağız. 🎤 Hangi isim en iyisi, sizce kim birinci olmalı? 🤔 Seçim yaparken keyif almanızı umuyoruz! Hazırsanız başlayalım! 😄</p>
-                <br>
-                <button type="button" id="startButton" onclick="startForm()">Başla</button>
-                <br><br><br><br><br>
-            </div>
-          </div>
+        <main>
+            <iframe
+    id="JotFormIFrame-233215318531044"
+    title="Boğaziçi Bilişim Ödülleri '23"
+    onload="window.parent.scrollTo(0,0)"
+    allowtransparency="true"
+    allowfullscreen="true"
+    allow="geolocation; microphone; camera"
+    src="https://form.jotform.com/233331799043054"
+    frameborder="0"
+    style="min-width:100%;max-width:100%;height:539px;border:none;"
+    scrolling="no"
+    >
+    </iframe>
+    <script type="text/javascript">
+    var ifr = document.getElementById("JotFormIFrame-233215318531044");
+    if (ifr) {
+    var src = ifr.src;
+    var iframeParams = [];
+    if (window.location.href && window.location.href.indexOf("?") > -1) {
+      iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+    }
+    if (src && src.indexOf("?") > -1) {
+      iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+      src = src.substr(0, src.indexOf("?"))
+    }
+    iframeParams.push("isIframeEmbed=1");
+    ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+    if (typeof e.data === 'object') { return; }
+    var args = e.data.split(":");
+    if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+    if (!iframe) { return; }
+    switch (args[0]) {
+      case "scrollIntoView":
+        iframe.scrollIntoView();
+        break;
+      case "setHeight":
+        iframe.style.height = args[1] + "px";
+        if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+          iframe.style.minHeight = args[1] + "px";
+        }
+        break;
+      case "collapseErrorPage":
+        if (iframe.clientHeight > window.innerHeight) {
+          iframe.style.height = window.innerHeight + "px";
+        }
+        break;
+      case "reloadPage":
+        window.location.reload();
+        break;
+      case "loadScript":
+        if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+        var src = args[1];
+        if (args.length > 3) {
+            src = args[1] + ':' + args[2];
+        }
+        var script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+        break;
+      case "exitFullscreen":
+        if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+        else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+        else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+        else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+        else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+        break;
+    }
+    var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+    if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+      var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+      iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+    }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+    var url = document.createElement('a');
+    url.href = originUrl;
+    var hostname = url.hostname;
+    var result = false;
+    if( typeof hostname !== 'undefined' ) {
+      whitelisted_domains.forEach(function(element) {
+          if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+              result = true;
+          }
+      });
+      return result;
+    }
+    };
+    if (window.addEventListener) {
+    window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+    window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    var element = document.querySelector(".formFooter.f6.branding21");
+            if (element) {
+                element.style.display = "none";
+            }
+    </script>
+        </main>
 
-          <div class="container" id="step1">
-            <form id="multiStepForm">
-                <div class="question-container active" id="question1">
-                    <h2>En İyi Yapay Zeka Girişimi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q1c1" name="entry.945115466" value="RolTek" required>
-                            <label for="q1c1">
-                                <img src="/assets/adaylar/roltek.png" alt="Candidate 1">
-                                <br>RolTek
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q1c2" name="entry.945115466" value="Novus" required>
-                            <label for="q1c2">
-                                <img src="/assets/adaylar/novus.png" alt="Candidate 2">
-                                <br>Novus
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q1c3" name="entry.945115466" value="Tazı AI" required>
-                            <label for="q1c3">
-                                <img src="/assets/adaylar/tazi.png" alt="Candidate 3">
-                                <br>Tazı AI
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q1c5" name="entry.945115466" value="Move ON" required>
-                            <label for="q1c5">
-                                <img src="/assets/adaylar/moveon.png" alt="Candidate 5">
-                                <br>Move ON
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q1c4" name="entry.945115466" value="Amani AI" required>
-                            <label for="q1c4">
-                                <img src="/assets/adaylar/amani.png" alt="Candidate 4">
-                                <br>Amani AI
-                            </label>
-                        </div> 
-                    </div>
-                </div>
-        
-                <div class="question-container" id="question2">
-                    <h2>En İyi Podcast Serisi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q2c1" name="entry.1293755096" value="Ortamlarda Satılacak Bilgi" required>
-                            <label for="q2c1">
-                                <img src="/assets/adaylar/osb.jpg" alt="Candidate 1">
-                                <br>Ortamlarda Satılacak Bilgi
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c2" name="entry.1293755096" value="Kalt'ın Podcast'i" required>
-                            <label for="q2c2">
-                                <img src="/assets/adaylar/kalt.jpg" alt="Candidate 2">
-                                <br>Kalt'ın Podcast'i
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c3" name="entry.1293755096" value="Nasıl Olunur?" required>
-                            <label for="q2c3">
-                                <img src="/assets/adaylar/nasilolunur.jpg" alt="Candidate 3">
-                                <br>Nasıl Olunur?
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c6" name="entry.1293755096" value="Açık Beyin" required>
-                            <label for="q2c6">
-                                <img src="/assets/adaylar/pdc.jpg" alt="Candidate 6">
-                                <br>Pelin Dilara Çolak
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c4" name="entry.1293755096" value="Podcastlendiniz" required>
-                            <label for="q2c4">
-                                <img src="/assets/adaylar/podcastlendiniz.jpg" alt="Candidate 4">
-                                <br>Podcastlendiniz
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c7" name="entry.1293755096" value="Açık Beyin" required>
-                            <label for="q2c7">
-                                <img src="/assets/adaylar/filmego.jpg" alt="Candidate 7">
-                                <br>Filme Gitmeden Önce
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q2c5" name="entry.1293755096" value="Açık Beyin" required>
-                            <label for="q2c5">
-                                <img src="/assets/adaylar/acikbeyin.png" alt="Candidate 5">
-                                <br>Açık Beyin
-                            </label>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="question-container" id="question3">
-                    <h2>En İyi YouTube İçerik Üreticisi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q3c1" name="entry.1578581061" value="Alper Rende" required>
-                            <label for="q3c1">
-                                <img src="/assets/adaylar/alperrende.jpeg" alt="Candidate 1">
-                                <br>Alper Rende
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q3c6" name="entry.1578581061" value="Tuna Tavus" required>
-                            <label for="q3c6">
-                                <img src="/assets/adaylar/tunatavus.jpg" alt="Candidate 6">
-                                <br>Tuna Tavus
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q3c5" name="entry.1578581061" value="Daire" required>
-                            <label for="q3c5">
-                                <img src="/assets/adaylar/daire.png" alt="Candidate 5">
-                                <br>Daire
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q3c4" name="entry.1578581061" value="Sosyal Terapi" required>
-                            <label for="q3c4">
-                                <img src="/assets/adaylar/sosyalterapi.png" alt="Candidate 4">
-                                <br>Sosyal Terapi
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q3c3" name="entry.1578581061" value="Akademiklink" required>
-                            <label for="q3c3">
-                                <img src="/assets/adaylar/akademiklink.jpg" alt="Candidate 3">
-                                <br>Akademiklink
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q3c2" name="entry.1578581061" value="Enis Kirazoğlu" required>
-                            <label for="q3c2">
-                                <img src="/assets/adaylar/eniskirazoglu.jpg" alt="Candidate 2">
-                                <br>Enis Kirazoğlu
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question4">
-                    <h2>En İyi Sosyal Medya İçerik Üreticisi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q4c1" name="entry.83290777" value="Doğa Özdaş" required>
-                            <label for="q4c1">
-                                <img src="/assets/adaylar/dogaozdas.jpg" alt="Candidate 1">
-                                <br>Doğa Özdaş
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c6" name="entry.83290777" value="Sua Son" required>
-                            <label for="q4c6">
-                                <img src="/assets/adaylar/suason.jpg" alt="Candidate 6">
-                                <br>Sua Son
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c5" name="entry.83290777" value="Murat Kurtaran" required>
-                            <label for="q4c5">
-                                <img src="/assets/adaylar/muratkurtaran.jpg" alt="Candidate 5">
-                                <br>Murat Kurtaran
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c8" name="entry.83290777" value="Yağmur Vardar" required>
-                            <label for="q4c8">
-                                <img src="/assets/adaylar/yagmurvardar.jpeg" alt="Candidate 8">
-                                <br>Yağmur Vardar
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c7" name="entry.83290777" value="Umutcan Deniz İlyasoğlu" required>
-                            <label for="q4c7">
-                                <img src="/assets/adaylar/denizilyasoglu.jpg" alt="Candidate 7">
-                                <br>Umutcan Deniz İlyasoğlu
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c4" name="entry.83290777" value="Simay Dal" required>
-                            <label for="q4c4">
-                                <img src="/assets/adaylar/simaydal.jpeg" alt="Candidate 4">
-                                <br>Simay Dal
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c3" name="entry.83290777" value="Ahmet Hakan Keleş" required>
-                            <label for="q4c3">
-                                <img src="/assets/adaylar/ahmetkeles.jpg" alt="Candidate 3">
-                                <br>Ahmet Hakan Keleş
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q4c2" name="entry.83290777" value="Hülya Kahveci" required>
-                            <label for="q4c2">
-                                <img src="/assets/adaylar/hulyakahveci.jpg" alt="Candidate 2">
-                                <br>Hülya Kahveci
-                            </label>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="question-container" id="question5">
-                    <h2>En İyi E-Ticaret Uygulaması</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q5c1" name="entry.1963658691" value="Amazon Türkiye" required>
-                            <label for="q5c1">
-                                <img src="/assets/adaylar/amazontr.jpg" alt="Candidate 1">
-                                <br>Amazon Türkiye
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q5c2" name="entry.1963658691" value="Sahibinden" required>
-                            <label for="q5c2">
-                                <img src="/assets/adaylar/sahibinden.png" alt="Candidate 2">
-                                <br>Sahibinden
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q5c3" name="entry.1963658691" value="Hepsiburada" required>
-                            <label for="q5c3">
-                                <img src="/assets/adaylar/hepsiburada.png" alt="Candidate 3">
-                                <br>Hepsiburada
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q5c4" name="entry.1963658691" value="Pazarama" required>
-                            <label for="q5c4">
-                                <img src="/assets/adaylar/pazarama.png" alt="Candidate 4">
-                                <br>Pazarama
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q5c5" name="entry.1963658691" value="Çiçeksepeti" required>
-                            <label for="q5c5">
-                                <img src="/assets/adaylar/ciceksepeti.png" alt="Candidate 5">
-                                <br>Çiçeksepeti
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q5c6" name="entry.1963658691" value="D&R Online" required>
-                            <label for="q5c6">
-                                <img src="/assets/adaylar/dnr.jpg" alt="Candidate 6">
-                                <br>D&R Online
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question6">
-                    <h2>En İyi Sanal Market Uygulaması</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q6c1" name="entry.933126229" value="Migros One" required>
-                            <label for="q6c1">
-                                <img src="/assets/adaylar/migros.png" alt="Candidate 1">
-                                <br>Migros One
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q6c2" name="entry.933126229" value="Getir" required>
-                            <label for="q6c2">
-                                <img src="/assets/adaylar/getir.png" alt="Candidate 2">
-                                <br>Getir
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q6c3" name="entry.933126229" value="Trendyol GO" required>
-                            <label for="q6c3">
-                                <img src="/assets/adaylar/trendyol.jpg" alt="Candidate 3">
-                                <br>Trendyol GO
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q6c4" name="entry.933126229" value="CarrefourSA Online Market" required>
-                            <label for="q6c4">
-                                <img src="/assets/adaylar/carrefoursa.jpg" alt="Candidate 4">
-                                <br>CarrefourSA Online Market
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-container" id="question7">
-                    <h2>En İyi Ulaşım Uygulaması</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q7c1" name="entry.750109068" value="Binbin" required>
-                            <label for="q7c1">
-                                <img src="/assets/adaylar/binbin.png" alt="Candidate 1">
-                                <br>Binbin
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q7c2" name="entry.750109068" value="Uber" required>
-                            <label for="q7c2">
-                                <img src="/assets/adaylar/uber.png" alt="Candidate 2">
-                                <br>Uber
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q7c3" name="entry.750109068" value="BiTaksi" required>
-                            <label for="q7c3">
-                                <img src="/assets/adaylar/bitaksi.png" alt="Candidate 3">
-                                <br>BiTaksi
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q7c4" name="entry.750109068" value="Tiktak" required>
-                            <label for="q7c4">
-                                <img src="/assets/adaylar/tiktak.png" alt="Candidate 4">
-                                <br>Tiktak
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q7c5" name="entry.750109068" value="Hop" required>
-                            <label for="q7c5">
-                                <img src="/assets/adaylar/hop.jpeg" alt="Candidate 5">
-                                <br>Hop
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-container" id="question8">
-                    <h2>Sosyal Medyayı En Etkili Kullanan Ünlü</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q8c1" name="entry.847974182" value="Nurgül Yeşilçay" required>
-                            <label for="q8c1">
-                                <img src="/assets/adaylar/nurgulyesilcay.png" alt="Candidate 1">
-                                <br>Nurgül Yeşilçay
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q8c3" name="entry.847974182" value="Aslı İnandık" required>
-                            <label for="q8c3">
-                                <img src="/assets/adaylar/asliinandik.jpeg" alt="Candidate 3">
-                                <br>Aslı İnandık
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q8c2" name="entry.847974182" value="Farah Zeynep Abdullah" required>
-                            <label for="q8c2">
-                                <img src="/assets/adaylar/fza.png" alt="Candidate 2">
-                                <br>Farah Zeynep Abdullah
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q8c4" name="entry.847974182" value="Melis Sezen" required>
-                            <label for="q8c4">
-                                <img src="/assets/adaylar/melisezen.jpg" alt="Candidate 4">
-                                <br>Melis Sezen
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question9">
-                    <h2>En İyi Dijital Talk Show</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q9c1" name="entry.398401933" value="Toksik İlişkiler" required>
-                            <label for="q9c1">
-                                <img src="/assets/adaylar/toksikiliskiler.jpg" alt="Candidate 1">
-                                <br>Toksik İlişkiler
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q9c2" name="entry.398401933" value="Çimen Show" required>
-                            <label for="q9c2">
-                                <img src="/assets/adaylar/cimenshow.png" alt="Candidate 2">
-                                <br>Çimen Show
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q9c3" name="entry.398401933" value="Melis İşiten" required>
-                            <label for="q9c3">
-                                <img src="/assets/adaylar/melisiten.jpeg" alt="Candidate 3">
-                                <br>Melis İşiten
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q9c4" name="entry.398401933" value="Berfu Yenenler" required>
-                            <label for="q9c4">
-                                <img src="/assets/adaylar/berfuyen.png" alt="Candidate 4">
-                                <br>Berfu Yenenler
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-container" id="question10">
-                    <h2>En İyi Blockchain Tabanlı Girişim</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q10c1" name="entry.1820706142" value="BTCTürk" required>
-                            <label for="q10c1">
-                                <img src="/assets/adaylar/btcturk.png" alt="Candidate 1">
-                                <br>BTCTürk
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q10c3" name="entry.1820706142" value="btguru" required>
-                            <label for="q10c3">
-                                <img src="/assets/adaylar/btguru.png" alt="Candidate 3">
-                                <br>btguru
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q10c2" name="entry.1820706142" value="İstanbul Blockchain Women" required>
-                            <label for="q10c2">
-                                <img src="/assets/adaylar/ibw.jpeg" alt="Candidate 2">
-                                <br>İstanbul Blockchain Women
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question11">
-                    <h2>En İyi Yerli Dijital Yayın Platformu</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q11c1" name="entry.1413983574" value="Turkcell TV+" required>
-                            <label for="q11c1">
-                                <img src="/assets/adaylar/turkcell.png" alt="Candidate 1">
-                                <br>Turkcell TV+
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q11c2" name="entry.1413983574" value="GAIN" required>
-                            <label for="q11c2">
-                                <img src="/assets/adaylar/gain.png" alt="Candidate 2">
-                                <br>GAIN
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q11c3" name="entry.1413983574" value="Mubi" required>
-                            <label for="q11c3">
-                                <img src="/assets/adaylar/mubi.png" alt="Candidate 3">
-                                <br>Mubi
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q11c4" name="entry.1413983574" value="S Sports+" required>
-                            <label for="q11c4">
-                                <img src="/assets/adaylar/ssport.png" alt="Candidate 4">
-                                <br>S Sports+
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question12">
-                    <h2>En İyi Online Yayıncı</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q12c2" name="entry.195216280" value="Eray" required>
-                            <label for="q12c2">
-                                <img src="/assets/adaylar/eray.jpg" alt="Candidate 2">
-                                <br>Eray
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q12c4" name="entry.195216280" value="Nemesis Fulya Eren" required>
-                            <label for="q12c4">
-                                <img src="/assets/adaylar/nemesis.png" alt="Candidate 4">
-                                <br>Nemesis Fulya Eren
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q12c3" name="entry.195216280" value="Hype" required>
-                            <label for="q12c3">
-                                <img src="/assets/adaylar/hype.jpeg" alt="Candidate 3">
-                                <br>Hype
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q12c1" name="entry.195216280" value="HTalks" required>
-                            <label for="q12c1">
-                                <img src="/assets/adaylar/htalks.jpg" alt="Candidate 1">
-                                <br>HTalks
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question13">
-                    <h2>En İyi Yerli Oyun Geliştirme Şirketi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q13c1" name="entry.251135276" value="Masomo" required>
-                            <label for="q13c1">
-                                <img src="/assets/adaylar/masomo.png" alt="Candidate 1">
-                                <br>Masomo
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q13c5" name="entry.251135276" value="Spektra" required>
-                            <label for="q13c5">
-                                <img src="/assets/adaylar/spektra.jpeg" alt="Candidate 5">
-                                <br>Spektra
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q13c3" name="entry.251135276" value="tiplay" required>
-                            <label for="q13c3">
-                                <img src="/assets/adaylar/tiplay.png" alt="Candidate 3">
-                                <br>tiplay
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q13c4" name="entry.251135276" value="Ace Games" required>
-                            <label for="q13c4">
-                                <img src="/assets/adaylar/acegames.png" alt="Candidate 4">
-                                <br>Ace Games
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q13c6" name="entry.251135276" value="Rogue Duck" required>
-                            <label for="q13c6">
-                                <img src="/assets/adaylar/rogueduck.png" alt="Candidate 6">
-                                <br>Rogue Duck
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q13c2" name="entry.251135276" value="Gram Games" required>
-                            <label for="q13c2">
-                                <img src="/assets/adaylar/gramgames.png" alt="Candidate 2">
-                                <br>Gram Games
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question14">
-                    <h2>En İyi Teknoloji İçerik Üreticisi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q14c1" name="entry.579430180" value="Selman Bozkır" required>
-                            <label for="q14c1">
-                                <img src="/assets/adaylar/selmanbozkir.jpg" alt="Candidate 1">
-                                <br>Selman Bozkır
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q14c3" name="entry.579430180" value="Ekin Kollama" required>
-                            <label for="q14c3">
-                                <img src="/assets/adaylar/ekinkollama.jpeg" alt="Candidate 3">
-                                <br>Ekin Kollama
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q14c2" name="entry.579430180" value="Hakan Sezginel" required>
-                            <label for="q14c2">
-                                <img src="/assets/adaylar/hakansezginel.jpg" alt="Candidate 2">
-                                <br>Hakan Sezginel
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q14c4" name="entry.579430180" value="Ayhan Tarakçı" required>
-                            <label for="q14c4">
-                                <img src="/assets/adaylar/ayhantarakci.jpeg" alt="Candidate 4">
-                                <br>Ayhan Tarakçı
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question15">
-                    <h2>En İyi Siber Güvenlik Şirketi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q15c1" name="entry.586415959" value="CyberWise" required>
-                            <label for="q15c1">
-                                <img src="/assets/adaylar/cyberwise.png" alt="Candidate 1">
-                                <br>CyberWise
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q15c3" name="entry.586415959" value="ADEO" required>
-                            <label for="q15c3">
-                                <img src="/assets/adaylar/adeo.png" alt="Candidate 3">
-                                <br>ADEO
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q15c2" name="entry.586415959" value="invicti" required>
-                            <label for="q15c2">
-                                <img src="/assets/adaylar/invicti.png" alt="Candidate 2">
-                                <br>invicti
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q15c4" name="entry.586415959" value="Kaspersky" required>
-                            <label for="q15c4">
-                                <img src="/assets/adaylar/kaspersky.png" alt="Candidate 4">
-                                <br>Kaspersky
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question16">
-                    <h2>En İyi E-Ticaret Çözümleri Şirketi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q16c2" name="entry.352552845" value="İdeasoft" required>
-                            <label for="q16c2">
-                                <img src="/assets/adaylar/ideasoft.png" alt="Candidate 2">
-                                <br>İdeasoft
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q16c3" name="entry.352552845" value="Ticimax" required>
-                            <label for="q16c3">
-                                <img src="/assets/adaylar/ticimax.png" alt="Candidate 3">
-                                <br>Ticimax
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q16c1" name="entry.352552845" value="İkas" required>
-                            <label for="q16c1">
-                                <img src="/assets/adaylar/ikas.png" alt="Candidate 1">
-                                <br>İkas
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-container" id="question17">
-                    <h2>En İyi FinTech Şirketi</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q17c2" name="entry.3318643" value="Sipay" required>
-                            <label for="q17c2">
-                                <img src="/assets/adaylar/sipay.jpg" alt="Candidate 2">
-                                <br>Sipay
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q17c4" name="entry.3318643" value="Moka" required>
-                            <label for="q17c4">
-                                <img src="/assets/adaylar/moka.png" alt="Candidate 4">
-                                <br>Moka
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q17c1" name="entry.3318643" value="Midas" required>
-                            <label for="q17c1">
-                                <img src="/assets/adaylar/midas.png" alt="Candidate 1">
-                                <br>Midas
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q17c3" name="entry.3318643" value="Ödeal" required>
-                            <label for="q17c3">
-                                <img src="/assets/adaylar/odeal.png" alt="Candidate 3">
-                                <br>Ödeal
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="question-container" id="question18">
-                    <h2>En İyi Uygulama Stüdyosu</h2>
-                    <div class="candidate-list">
-                        <div class="candidate">
-                            <input type="radio" id="q18c1" name="entry.163748951" value="Codeway" required>
-                            <label for="q18c1">
-                                <img src="/assets/adaylar/codeway.png" alt="Candidate 1">
-                                <br>Codeway
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q18c2" name="entry.163748951" value="Lyrebird" required>
-                            <label for="q18c2">
-                                <img src="/assets/adaylar/lyrebird.png" alt="Candidate 2">
-                                <br>Lyrebird
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q18c3" name="entry.163748951" value="PlusMinusOne" required>
-                            <label for="q18c3">
-                                <img src="/assets/adaylar/pmone.jpg" alt="Candidate 3">
-                                <br>PlusMinusOne
-                            </label>
-                        </div>
-                        <!--
-                        <div class="candidate">
-                            <input type="radio" id="q18c4" name="entry.163748951" value="SevenApps" required>
-                            <label for="q18c4">
-                                <img src="candidate1.jpg" alt="Candidate 4">
-                                <br>SevenApps
-                            </label>
-                        </div>
-                        <div class="candidate">
-                            <input type="radio" id="q18c5" name="entry.163748951" value="HubX" required>
-                            <label for="q18c5">
-                                <img src="candidate1.jpg" alt="Candidate 5">
-                                <br>HubX
-                            </label>
-                        </div>
-                        -->
-                    </div>
-                </div>
-                <div class="navigation-buttons">
-                    <button type="button" id="nextButton" onclick="navigate(1)">İleri</button>
-                </div>
-
-                <br>
-
-                <div class="progress-bar-container">
-                    <div id="progress-bar" class="progress-bar"></div>
-                    <span id="progress-text" class="progress-text">Soru 1 / 17</span>
-                </div>
-        
-                <br>
-
-                <div class="button-container">
-                    <button type="submit" id="submitButton" style="display: none;">Gönder</button>
-                </div>
-            </div>
-            </form>
-        </div>
-        </section>
-
-        <script src="script.js"></script>
 
         <footer>
             <img class="compeclogo" src="/assets/compeclogo.png" alt="COMPEC_Logo">
-            <h3 id="logo_exp">©2024 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
+            <h3 id="logo_exp">©2023 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
                 <br> Etkinliğin tüm hakları Compec'e aittir 
                 ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</h3>           
         </footer>
