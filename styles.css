@@ -315,12 +315,3 @@ nav > #nav-btn, nav > #nav-check {
         overflow-y: auto;
       }
 }
-
-.timer {
-    font-size: 28px;
-    color: #FFF;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -45px;
-    margin-bottom: 50px;
-}
