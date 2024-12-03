@@ -193,6 +193,12 @@ Aşasğısı anasayfa özel
     background-color:#101;
 }
 
+.btn:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: -1;
+}
+
 
 .btn {
     text-decoration: none;
@@ -308,4 +314,13 @@ nav > #nav-btn, nav > #nav-check {
         height: calc(100vh - 50px);
         overflow-y: auto;
       }
+}
+
+.timer {
+    font-size: 28px;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -45px;
+    margin-bottom: 50px;
 }

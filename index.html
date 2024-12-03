@@ -38,9 +38,9 @@
                     <li><a  href="/Adaylar/index.html">Adaylar</a></li>
                     <!-- <li><a  href="/Oylama/index.html">Oylama</a></li> -->
                     <li><a  href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126" target="_blank">Bilet Al!</a></li>
+                    <a href = "https://www.instagram.com/bogazicibilisimodulleri/" target = "_blank"><img  class = "instalogo" src="/assets/instagram.png" alt="instagram" ></a>
                 </ul>
             </nav>
-            <!-- <a href = "https://www.instagram.com/bogazicibilisimodulleri/" target = "_blank"><img  class = "instalogo" src="/assets/instagram.png" alt="instagram" ></a> -->
         </header>
             <div id="row">
                 <div id="main_left_part">
@@ -53,13 +53,12 @@
                 </div>
             </div>  
             <div class="garagara">      
-                <!--<button class="btn" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126", "_blank")'>Bilet Al!</button>-->
-                <button class="btn" onclick="location.href='/Oylama/index.html'">Oy Ver!</button>
+                <button style="display: none;" class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126", "_blank")'>Bilet Al!</button>
+                <button class="btn" id="oyver" onclick="location.href='/Oylama/index.html'">Oy Ver!</button>
             </div>
-                                       
+            <div id="countdown" class="timer"></div>                                     
              
         <footer> 
-            
             <img class="compeclogo" src="/assets/compeclogo.png" alt="COMPEC_Logo">
             <h3 id="logo_exp">©2024 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
                 <br> Etkinliğin tüm hakları Compec'e aittir 
@@ -107,10 +106,30 @@
                 
                 update();
             }
-            console.log(document.body.style.background)
-            // Example: Rotate the gradient 360 degrees in 8 seconds
             animateGradientRotation(8000, 135, 495); // 495 = 135 + 360
             
+        </script>
+        <!-- Countdown timer for voting -->
+        <script>
+            const countdownDate = new Date("Dec 10, 2024 00:00:00").getTime();
+            const interval = setInterval(function() {
+                const now = new Date().getTime();
+                const remainingTime = countdownDate - now;
+
+                const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById("countdown").innerHTML = 
+                    "Son " + days + " gün, " + hours + " saat, " + minutes + " dakika!";
+
+                if (remainingTime <= 0) {
+                    clearInterval(interval);
+                    document.getElementById("countdown").innerHTML = "";
+                    document.getElementById("oyver").style.display = "none";
+                    document.getElementById("biletal").style.display = "block";
+                }
+            }, 1000);
         </script>
     </body>
 </html>
