@@ -10,10 +10,10 @@ function startForm() {
 function navigate(direction) {
     const currentQuestion = document.getElementById('question' + currentStep);
 
-    if (!isQuestionAnswered(currentStep)) {
+    /*if (!isQuestionAnswered(currentStep)) {
         alert("Lütfen bir adayı oylayın.");
         return;
-    }
+    }*/
 
     currentQuestion.classList.remove('active');
               
