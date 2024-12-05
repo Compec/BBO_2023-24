@@ -135,6 +135,18 @@ Aşasğısı anasayfa özel
     padding: 0px 36px;
 }
 
+#dominoslogo {
+    color: #FFF;
+    text-align: center;
+    margin: 5px auto;
+}
+
+#dominoslogo > img {
+    width: max(15%, 125px);
+    padding-right: 10px;
+    padding-top: 1px;
+}
+
 .beyaz_yazi {
     width: 50%;
 }

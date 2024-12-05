@@ -49,15 +49,17 @@ function navigate(direction) {
         const formData = new FormData(this);
         const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdcaZmp11i_oN44F9S_uVY0DYp-TDGHd5yRzBeytLrdurHpSA/formResponse';
         
-        fetch(googleFormURL, {
+        /*fetch(googleFormURL, {
           method: 'POST',
           body: formData
-        });
+        });*/
         document.getElementById('multiStepForm').innerHTML = `
         <div class="thank-you-message">
           <br><br>
           <h2>Teşekkürler! 🎉</h2>
-          <p>Oy kullandığınız için çok teşekkür ederiz! 🥳 Yanıtınız başarıyla kaydedildi ve büyük bir katkı sağladınız! 🙌</p>
+          <p>Oy kullandığınız için çok teşekkür ederiz! 🥳 14 Aralık'taki zirvemize de bekleriz! 🙌</p>
+          <br>
+          <button class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126", "_blank")'>Bilet Al!</button>
           <br><br>
         </div>
         `;
