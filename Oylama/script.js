@@ -10,10 +10,10 @@ function startForm() {
 function navigate(direction) {
     const currentQuestion = document.getElementById('question' + currentStep);
 
-    /*if (!isQuestionAnswered(currentStep)) {
+    if (!isQuestionAnswered(currentStep)) {
         alert("Lütfen bir adayı oylayın.");
         return;
-    }*/
+    }
 
     currentQuestion.classList.remove('active');
               
@@ -39,12 +39,12 @@ function navigate(direction) {
     document.getElementById('multiStepForm').addEventListener('submit', function(event) {        
         event.preventDefault();
         
-        /*for (let i = 1; i <= totalSteps; i++) {
+        for (let i = 1; i <= totalSteps; i++) {
             if (!isQuestionAnswered(i)) {
                 alert("Lütfen tüm kategoriler için oy kullanın.");
                 return;
             }
-        }*/
+        }
 
         const formData = new FormData(this);
         const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdcaZmp11i_oN44F9S_uVY0DYp-TDGHd5yRzBeytLrdurHpSA/formResponse';
