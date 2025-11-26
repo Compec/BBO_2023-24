@@ -59,7 +59,7 @@ function navigate(direction) {
           <h2>Teşekkürler! 🎉</h2>
           <p>Oy kullandığınız için çok teşekkür ederiz! 🥳 14 Aralık'taki zirvemize de bekleriz! 🙌</p>
           <br>
-          <button class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-9126", "_blank")'>Bilet Al!</button>
+          <button class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>Bilet Al!</button>
           <br><br>
         </div>
         `;
