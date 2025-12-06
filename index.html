@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/assets/favicon/site.webmanifest">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/favicon/site.webmanifest">
         <title>Boğaziçi Bilişim Ödülleri</title>
     </head>
     <!-- Google tag (gtag.js) -->
@@ -16,13 +16,12 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-369ZRVNDT0');
     </script>
     <body>
         <header>
             <div class="logo">
-                <a href="/index.html"><img src="/assets/bbologo.png" alt="BBO_Logo" ></a>
+                <a href="./index.html"><img src="./assets/bbologo.png" alt="BBO_Logo"></a>
             </div>
             <nav>
                 <input type="checkbox" id="nav-check">
@@ -34,93 +33,44 @@
                     </label>
                 </div>
                 <ul id="nav-links">
-                    <li><a  href="/index.html">Anasayfa</a></li>
-                    <li><a  href="/Adaylar/index.html">2024 Adayları</a></li>
-                    <!-- <li><a  href="/Oylama/index.html">Oylama</a></li> -->
-                    <li><a  href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
-                    <a href = "https://www.instagram.com/bogazicibilisimodulleri/" target = "_blank"><img  class = "instalogo" src="/assets/instagram.png" alt="instagram" ></a>
+                    <li><a href="./index.html">Anasayfa</a></li>
+                    <li><a href="./Adaylar/index.html">2025 Adayları</a></li>
+                    <li style="opacity: 0.5; pointer-events: none;"><a href="#" onclick="return false;">Oylama (Yakında)</a></li>
+                    <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
+                    <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="./assets/instagram.png" alt="instagram"></a>
                 </ul>
             </nav>
         </header>
-            <div id="row">
-                <div id="main_left_part">
-                    <img class="beyaz_yazi" src="/assets/arka yüz copy 10.png" alt="Boğaziçi Bilişim Ödülleri">
-                        <p class="nedir">Boğaziçi Bilişim Ödülleri, Boğaziçi Üniversitesi Bilişim Kulübü COMPEC'in bu sene on 
-                            üçüncüsünü düzenleyeceği, halk, jüri ve bilişim kulüplerinin oylarının alındığı süreç sonunda, 
-                            bilişim sektöründe faaliyet gösteren kişi ve kuruluşların enlerinin ödüllerine kavuştuğu prestijli ve 
-                            gösterişli ödül gecesidir.
-                        </p>
-                </div>
-            </div>  
-            <div class="garagara">  
-                
-                    <button style="display: none;" class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670")'>Bilet Al!</button>
-                    <button class="btn" id="oyver" onclick="location.href='/Oylama/index.html'">Oy Ver!</button>
-                
+
+        <div id="row">
+            <div id="main_left_part">
+                <img class="beyaz_yazi" src="./assets/arka yüz copy 10.png" alt="Boğaziçi Bilişim Ödülleri">
+                <p class="nedir">Boğaziçi Bilişim Ödülleri, Boğaziçi Üniversitesi Bilişim Kulübü COMPEC'in bu sene on 
+                    üçüncüsünü düzenleyeceği, halk, jüri ve bilişim kulüplerinin oylarının alındığı süreç sonunda, 
+                    bilişim sektöründe faaliyet gösteren kişi ve kuruluşların enlerinin ödüllerine kavuştuğu prestijli ve 
+                    gösterişli ödül gecesidir.
+                </p>
             </div>
-            <div id="countdown" class="timer"></div>                                     
+        </div>
+
+        <div class="garagara">  
+            <button style="display: none;" class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670")'>🎟️ Bilet Al!</button>
+            <button class="btn" id="oyver" style="opacity: 0.6; cursor: not-allowed;" onclick="alert('Oylama yakında açılacaktır! 🗳️'); return false;">🗳️ Oy Ver! (Yakında)</button>
+        </div>
+
+        <div style="text-align: center;">
+            <div id="countdown" class="timer"></div>
+        </div>
              
         <footer> 
-            <img class="compeclogo" src="/assets/compeclogo.png" alt="COMPEC_Logo">
-            <h3 id="logo_exp">©2025 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
-                <br> Etkinliğin tüm hakları Compec'e aittir 
-                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</h3>           
+            <img class="compeclogo" src="./assets/compeclogo.png" alt="COMPEC_Logo">
+            <p id="logo_exp">©2025 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
+                <br>Etkinliğin tüm hakları Compec'e aittir 
+                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>           
         </footer>
-        
-
-
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                max-height: 200vh;
-                background: linear-gradient(var(--gradient-angle), black, #712471, black);
-                background-size: 100% 240%;
-            }
-            .timer {
-            font-size: 28px;
-            color: #FFF;
-            font-weight: bold;
-            text-align: center;
-            margin-top: -45px;
-            margin-bottom: 50px;
-            }
-        </style>
-
 
         <script>
-            // Function to set the angle of the linear gradient
-            function setGradientAngle(degrees) {
-            document.documentElement.style.setProperty('--gradient-angle', `${degrees}deg`);
-        }
-    
-            // Function to animate the gradient rotation
-            function animateGradientRotation(duration, startAngle, endAngle) {
-                const startTime = Date.now();
-    
-                function update() {
-                    const currentTime = Date.now();
-                    const progress = (currentTime - startTime) / duration;
-                    const currentAngle = startAngle + (endAngle - startAngle) * progress;
-    
-                    setGradientAngle(currentAngle);
-    
-                    if (progress < 1) {
-                        requestAnimationFrame(update);
-                    }
-                    else {
-                    // Restart the animation when it reaches the end
-                    animateGradientRotation(duration, startAngle, endAngle);
-                }
-                }
-                
-                update();
-            }
-            animateGradientRotation(8000, 135, 495); // 495 = 135 + 360
-            
-        </script>
-        <!-- Countdown timer for voting -->
-        <script>
+            // Countdown timer for voting
             const countdownDate = new Date("Dec 10, 2024 08:00:00").getTime();
             const interval = setInterval(function() {
                 const now = new Date().getTime();
@@ -131,15 +81,15 @@
                 const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
 
                 document.getElementById("countdown").innerHTML = 
-                    "Son " + days + " gün, " + hours + " saat, " + minutes + " dakika!";
+                    "⏱️ Son " + days + " gün, " + hours + " saat, " + minutes + " dakika!";
 
                 if (remainingTime <= 0) {
                     clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "";
+                    document.getElementById("countdown").innerHTML = "🎉 Oylama sona erdi!";
                     document.getElementById("oyver").style.display = "none";
-                    document.getElementById("biletal").style.display = "block";
+                    document.getElementById("biletal").style.display = "inline-flex";
                 }
             }, 1000);
         </script>
-    </body>
+    </body>
 </html>

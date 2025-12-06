@@ -1,0 +1,329 @@
+html {
+    font-family: Inter, sans-serif;
+}
+/*
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, black, #712471, black);
+    height: 200vh;
+    background-repeat: no-repeat;
+}
+*/
+
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+.instalogo {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #101;
+    padding: 0px 15px 0 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-left: 30px;
+}
+
+nav li {
+    padding: 0 30px 0 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+nav a:hover {
+    color: #C49D33;
+}
+
+footer {
+    color: white;
+    width: 100%;
+    /*position: absolute;*/
+    /*bottom: -700px;*/
+    width: 100%;
+    text-align: center;
+}
+
+.compeclogo {
+    width: 250px;
+    height: auto;
+}
+
+.pep {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+}
+
+.peplogo {
+    width: 500px;
+    height: auto;  
+    
+}
+@media (max-width: 667px) {
+    .peplogo {
+        width: 250px;
+              
+    }
+}
+@media (max-width: 340px) {
+    .peplogo {
+        width: 240px;
+        height: auto;  
+        
+    }
+}
+
+
+
+
+#logo_exp {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0 100px;
+}
+
+@media (max-width: 370px) {
+    body {
+        height: 300vh;
+    }
+}
+
+/*
+Üstteki kısım her sayfada olacak
+Aşasğısı anasayfa özel
+*/
+
+.beyazlogo {
+    width: 25%;
+    align-self: center;
+    /*padding-top: 8%;*/
+    padding: 0px 36px;
+}
+
+#dominoslogo {
+    color: #FFF;
+    text-align: center;
+    margin: 5px auto;
+}
+
+#dominoslogo > img {
+    width: max(15%, 125px);
+    padding-right: 10px;
+    padding-top: 1px;
+}
+
+.beyaz_yazi {
+    width: 50%;
+}
+
+.nedir {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    /*margin: 5%;*/
+    /*margin-top: -140px;*/
+}
+
+
+#main_left_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 36px;
+    padding: 0px 24px;
+}
+
+#bbo_logo {
+    width: 40%;
+    height: 40%;
+}
+
+.btn {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px #712471 solid;
+    margin: 60px auto;
+    padding: 24px 18px;
+    border-radius: 14px;
+    color: #fff;
+    background-color:#712471;
+}
+
+.btn:hover {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px #C49D33 solid;
+    margin: 60px auto;
+    padding: 24px 18px;
+    border-radius: 14px;
+    color: #fff;
+    background-color:#101;
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+}
+
+.garagara {
+    display: flex;
+    justify-content: space-between;
+}
+/*
+MOBİL
+*/
+
+@media screen and (max-width: 790px) {
+    body {
+        background-repeat: no-repeat;
+    }
+    .beyaz_yazi {
+        width: rem;
+    }
+    header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: #101;
+        padding: 0px 15px 0px 15px;
+    }
+    .btn:active {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        border: 2px #C49D33 solid;
+        margin: 60px auto;
+        padding: 24px 18px;
+        border-radius: 14px;
+        color: #fff;
+        background-color:#101;
+    }
+    .nedir {
+        /*margin-top: -22%;
+        margin-right: 2%;*/
+        font-size: 0.9rem;
+    }
+
+
+    .beyazlogo {
+        display: none;
+    }
+    .beyaz_yazi {
+        width: 90%;
+    }
+    #logo_exp {
+        color: #FFF;
+        text-align: center;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 0 40px;
+    }
+}
+
+/* Mobile Navbar */
+nav > #nav-btn, nav > #nav-check {
+    display: none;
+}
+
+@media screen and (max-width: 790px) {
+    nav > #nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 8px;
+    }
+    nav > #nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    nav > #nav-btn > label:hover, nav  #nav-check:checked ~ #nav-btn > label {
+        cursor: pointer;
+      }
+      nav > #nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+      nav > #nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #101;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: -40px;
+      }
+      nav > #nav-links > li {
+        display: block;
+        width: 80%;
+        margin-left: 50px;
+        font-size: 3em;
+      }
+      nav > #nav-check:not(:checked) ~ #nav-links {
+        height: 0px;
+      }
+      nav > #nav-check:checked ~ #nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+}
