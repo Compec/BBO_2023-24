@@ -6,7 +6,9 @@ const ADAYLAR_DATA = [
         formEntry: "entry.3318643",
         adaylar: [
             { isim: "Moka United", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/mokaunited_logo-1.png", stil: "background-color: #FFF;" },
-            { isim: "Param", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/param.png", stil: "background-color: #FFF;" }
+            { isim: "Param", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/param.png", stil: "background-color: #FFF;" },
+            { isim: "Midas", fotograf: "", stil: "" },
+            { isim: "BtcTurk", fotograf: "", stil: "" }
         ]
     },
     {
@@ -19,7 +21,8 @@ const ADAYLAR_DATA = [
             { isim: "Move ON", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/moveon_logo_b_with_r.png", stil: "background-color: #FFF;" },
             { isim: "Novus", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/novus.png", stil: "background-color: #FFF;" },
             { isim: "Virasoft", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/virasoft.jpg", stil: "" },
-            { isim: "Voiser", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Voiser.png", stil: "background-color: #FFF;" }
+            { isim: "Voiser", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Voiser.png", stil: "background-color: #FFF;" },
+            { isim: "Mindra", fotograf: "", stil: "" }
         ]
     },
     {
@@ -46,7 +49,8 @@ const ADAYLAR_DATA = [
             { isim: "Evrim Ağacı", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Evrim Ağacı Logo.png", stil: "background-color: #FFF;" },
             { isim: "Omnibus", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/OmnibusLogo.jpg", stil: "" },
             { isim: "Sinemori", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sinemori_Logo_Istisnai_Kullanım.png", stil: "background-color: #000;" },
-            { isim: "Sözel Tim", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sözel Tim Görsel.jpeg", stil: "" }
+            { isim: "Sözel Tim", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sözel Tim Görsel.jpeg", stil: "" },
+            { isim: "Cansu Canan Özgen", fotograf: "", stil: "" }
         ]
     },
     {
@@ -112,7 +116,8 @@ const ADAYLAR_DATA = [
             { isim: "Crossover Talks", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/Crossover Talks logo insta profil resmi.png", stil: "" },
             { isim: "Hikayeden Adamlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hikayeden adamlar.PNG", stil: "" },
             { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linç@ arka plan.jpg", stil: "" },
-            { isim: "Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/pembe yalanlar.png", stil: "" }
+            { isim: "Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/pembe yalanlar.png", stil: "" },
+            { isim: "Hayrettin Kaos Show", fotograf: "", stil: "" }
         ]
     },
     {
@@ -139,7 +144,8 @@ const ADAYLAR_DATA = [
             { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/rollic.png", stil: "background-color: #FFF;" },
             { isim: "Spyke Games", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/Spyke mor logo.png", stil: "background-color: #FFF;" },
             { isim: "TaleWorlds", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/TW_initials_white.png", stil: "background-color: #000;" },
-            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" }
+            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" },
+            { isim: "Rogue Duck Interactive", fotograf: "", stil: "" }
         ]
     },
     {
@@ -152,7 +158,9 @@ const ADAYLAR_DATA = [
             { isim: "Emin Çıtak", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/Emin Çıtak.jpg", stil: "" },
             { isim: "Marcus7z", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/marcus7z.png", stil: "" },
             { isim: "Tunca Arslan", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/tunca arslan.jpg", stil: "" },
-            { isim: "zSuat", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/zSuat 3.png", stil: "" }
+            { isim: "zSuat", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/zSuat 3.png", stil: "" },
+            { isim: "Tosbaa", fotograf: "", stil: "" },
+            { isim: "Disket Kutusu", fotograf: "", stil: "" }
         ]
     },
     {
@@ -174,16 +182,8 @@ const ADAYLAR_DATA = [
             { isim: "Holy Shoot", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Holy Shoot - Tale Era Interactive/HolyShoot_Logo.png", stil: "background-color: #FFF;" },
             { isim: "Leila", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Leila-Ubik Studios", stil: "background-color: #000;" },
             { isim: "Lost Lullabies", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/lost lullabies.png", stil: "" },
-            { isim: "Supermarket Simulator", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/supermarket simulator.png", stil: "" }
+            { isim: "Supermarket Simulator", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/supermarket simulator.png", stil: "" },
+            { isim: "Zort", fotograf: "", stil: "" }
         ]
     },
-    {
-        kategori: "Sunucu",
-        kategoriId: "sunucu",
-        formEntry: "entry.163748951",
-        adaylar: [
-            { isim: "Aleyna Beyazgül", fotograf: "../assets/yeniaday/Sunucu/Aleyna Beyazgül.jpg", stil: "" },
-            { isim: "Özgün Görkem", fotograf: "../assets/yeniaday/Sunucu/Özgün Görkem .jpeg", stil: "" }
-        ]
-    }
 ];
