@@ -10,6 +10,14 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="../assets/favicon/site.webmanifest">
         <title>Boğaziçi Bilişim Ödülleri - Oylama</title>
+        
+        <!-- Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+        
+        <!-- Firebase Config -->
+        <script src="firebase-config.js"></script>
+        
         <!-- FingerprintJS kütüphanesi - Cihaz parmak izi için -->
         <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
         <script src="../adaylar-data.js"></script>
@@ -39,7 +47,7 @@
                 <ul id="nav-links">
                     <li><a href="../index.html">Anasayfa</a></li>
                     <li><a href="../Adaylar/index.html">2025 Adayları</a></li>
-                    <li style="opacity: 0.5; pointer-events: none;"><a href="#" onclick="return false;">Oylama (Yakında)</a></li>
+                    <li><a href="./index.html">Oylama</a></li>
                     <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
                     <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="../assets/instagram.png" alt="instagram"></a>
                 </ul>
@@ -47,17 +55,17 @@
         </header>
 
         <section id="form">
-            <div class="container active" id="welcomePage">
+            <div class="container" id="welcomePage" style="display: none;">
                 <div>
                     <h2>⏳ Oylama Henüz Açılmadı</h2>
-                    <p>2025 Boğaziçi Bilişim Ödülleri oylaması yakında başlayacak! 🏆</p>
+                    <p>2025 Boğaziçi Bilişim Ödülleri oylamасı yakında başlayacak! 🏆</p>
                     <p>Lütfen daha sonra tekrar ziyaret edin veya adayları inceleyebilirsiniz. 🚀</p>
                     <br>
                     <a href="../Adaylar/index.html" class="btn">📋 Adayları İncele</a>
                 </div>
             </div>
 
-            <div class="container" id="step1">
+            <div class="container active" id="step1">
                 <form id="multiStepForm">
                     <div id="questionsContainer">
                         <!-- Sorular buraya dinamik olarak yüklenecek -->

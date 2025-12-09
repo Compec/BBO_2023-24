@@ -1,6 +1,19 @@
 let currentStep = 1;
 const totalSteps = ADAYLAR_DATA.length;
 let deviceFingerprint = null;
+let db = null;
+
+// Firebase'i başlat
+function initFirebase() {
+    try {
+        firebase.initializeApp(firebaseConfig);
+        db = firebase.firestore();
+        console.log('✅ Firebase başlatıldı');
+    } catch (error) {
+        console.error('❌ Firebase başlatma hatası:', error);
+        alert('Veritabanı bağlantısı kurulamadı. Lütfen sayfayı yenileyin.');
+    }
+}
 
 // Cihaz parmak izini al
 async function getDeviceFingerprint() {
@@ -22,34 +35,66 @@ async function getDeviceFingerprint() {
 
 // Sayfa yüklendiğinde çalışacak
 document.addEventListener('DOMContentLoaded', async function() {
+    // Firebase'i başlat
+    initFirebase();
+    
     // Cihaz parmak izini al
     deviceFingerprint = await getDeviceFingerprint();
     console.log('Cihaz ID:', deviceFingerprint);
     
     // Kullanıcı daha önce oy verdiyse kontrol et
-    checkIfAlreadyVoted();
+    await checkIfAlreadyVoted();
     
     // Form sorularını oluştur
     generateQuestions();
 });
 
 // Kullanıcının daha önce oy verip vermediğini kontrol et
-function checkIfAlreadyVoted() {
-    const voted = localStorage.getItem('bbo_voted_' + deviceFingerprint);
-    
-    if (voted === 'true') {
-        // Kullanıcı zaten oy vermiş
-        document.getElementById('welcomePage').innerHTML = `
-            <div>
-                <h2>⚠️ Daha Önce Oy Kullandınız!</h2>
-                <p>Bu cihazdan daha önce oy kullanılmış.</p>
-                <p>Her cihaz sadece bir kez oy kullanabilir.</p>
-                <p>Katılımınız için teşekkür ederiz! 🎉</p>
-                <br>
-                <button onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
-            </div>
-        `;
-        document.getElementById('step1').style.display = 'none';
+async function checkIfAlreadyVoted() {
+    try {
+        // Firestore'dan kontrol et
+        const deviceRef = db.collection('device_votes').doc(deviceFingerprint);
+        const doc = await deviceRef.get();
+        
+        if (doc.exists && doc.data().voted === true) {
+            // Kullanıcı zaten oy vermiş - Formu gizle ve mesaj göster
+            const voteDate = doc.data().voteDate?.toDate();
+            const dateStr = voteDate ? voteDate.toLocaleDateString('tr-TR') : '';
+            
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('step1').innerHTML = `
+                <div style="text-align: center; padding: 60px 20px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">✅ Oy Kullandınız!</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 15px;">Bu cihazdan daha önce oy kullanılmış.</p>
+                    ${dateStr ? `<p style="font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Oy tarihi: ${dateStr}</p>` : ''}
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Her cihaz sadece bir kez oy kullanabilir.</p>
+                    <p style="font-size: 1.3rem; margin-bottom: 40px;">Katılımınız için teşekkür ederiz! 🎉</p>
+                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
+                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.location.href="../index.html"'>🏠 Ana Sayfaya Dön</button>
+                </div>
+            `;
+            return true;
+        }
+        return false;
+    } catch (error) {
+        console.error('Oy kontrolü hatası:', error);
+        // Hata durumunda localStorage'a da bak
+        const voted = localStorage.getItem('bbo_voted_' + deviceFingerprint);
+        if (voted === 'true') {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('step1').innerHTML = `
+                <div style="text-align: center; padding: 60px 20px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">✅ Oy Kullandınız!</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 15px;">Bu cihazdan daha önce oy kullanılmış.</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Her cihaz sadece bir kez oy kullanabilir.</p>
+                    <p style="font-size: 1.3rem; margin-bottom: 40px;">Katılımınız için teşekkür ederiz! 🎉</p>
+                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
+                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.location.href="../index.html"'>🏠 Ana Sayfaya Dön</button>
+                </div>
+            `;
+            return true;
+        }
+        return false;
     }
 }
 
@@ -91,9 +136,9 @@ function generateQuestions() {
             const input = document.createElement('input');
             input.type = 'radio';
             input.id = inputId;
-            input.name = kategori.formEntry;
+            input.name = kategori.kategoriId;
             input.value = aday.isim;
-            input.required = true;
+            input.required = false;
             
             const label = document.createElement('label');
             label.htmlFor = inputId;
@@ -175,8 +220,13 @@ function navigate(direction) {
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('multiStepForm');
     if (form) {
-        form.addEventListener('submit', function(event) {        
+        form.addEventListener('submit', async function(event) {        
             event.preventDefault();
+            
+            if (!db) {
+                alert('⚠️ Veritabanı bağlantısı yok. Lütfen sayfayı yenileyin.');
+                return;
+            }
             
             // Tüm soruların cevaplandığını kontrol et
             for (let i = 1; i <= totalSteps; i++) {
@@ -186,16 +236,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
-            // Formu Google Forms'a gönder
-            const formData = new FormData(this);
-            const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdcaZmp11i_oN44F9S_uVY0DYp-TDGHd5yRzBeytLrdurHpSA/formResponse';
-            
-            fetch(googleFormURL, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            }).then(() => {
-                // Oy kullanıldı olarak işaretle
+            // Submit butonunu devre dışı bırak
+            const submitBtn = document.getElementById('submitButton');
+            if (!submitBtn) {
+                console.error('Submit button bulunamadı');
+                return;
+            }
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = '📤 Gönderiliyor...';
+
+            try {
+                // Form verilerini topla
+                const formData = new FormData(this);
+                const answers = {};
+                
+                ADAYLAR_DATA.forEach(kategori => {
+                    const answer = formData.get(kategori.kategoriId);
+                    answers[kategori.kategori] = answer || 'Boş';
+                });
+                
+                // Oy verisini Firestore'a kaydet
+                const voteData = {
+                    deviceId: deviceFingerprint,
+                    answers: answers,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    voteDate: new Date(),
+                    userAgent: navigator.userAgent,
+                    screenResolution: `${window.screen.width}x${window.screen.height}`,
+                    referrer: document.referrer || 'direct'
+                };
+                
+                await db.collection('votes').add(voteData);
+                console.log('✅ Oy kaydedildi');
+                
+                // Cihaz bilgisini kaydet (tekrar oy kullanımını engellemek için)
+                await db.collection('device_votes').doc(deviceFingerprint).set({
+                    voted: true,
+                    voteDate: firebase.firestore.FieldValue.serverTimestamp(),
+                    timestamp: new Date()
+                });
+                console.log('✅ Cihaz kaydedildi');
+                
+                // LocalStorage'a da kaydet (fallback)
                 localStorage.setItem('bbo_voted_' + deviceFingerprint, 'true');
                 localStorage.setItem('bbo_vote_date_' + deviceFingerprint, new Date().toISOString());
                 
@@ -209,10 +292,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         <button onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
                     </div>
                 `;
-            }).catch((error) => {
-                console.error('Form gönderme hatası:', error);
-                alert('Oy gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
-            });
+                
+            } catch (error) {
+                console.error('❌ Oy gönderme hatası:', error);
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                // Hata mesajı
+                if (error.code === 'permission-denied') {
+                    alert('⚠️ Yetki hatası: Veritabanına erişim reddedildi. Lütfen site yöneticisiyle iletişime geçin.');
+                } else if (error.code === 'unavailable') {
+                    alert('⚠️ Bağlantı hatası: İnternet bağlantınızı kontrol edip tekrar deneyin.');
+                } else {
+                    alert('⚠️ Oy gönderilirken bir hata oluştu. Lütfen tekrar deneyin.\n\nHata: ' + error.message);
+                }
+            }
         });
     }
 });

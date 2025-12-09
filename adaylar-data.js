@@ -149,7 +149,8 @@ const ADAYLAR_DATA = [
             { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/rollic.png", stil: "background-color: #FFF;" },
             { isim: "Spyke Games", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/Spyke mor logo.png", stil: "background-color: #FFF;" },
             { isim: "TaleWorlds", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/TW_initials_white.png", stil: "background-color: #000;" },
-            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" }
+            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" },
+            { isim: "Teneke Kafalar", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/tenekekafalar.png", stil: "background-color: #FFF;" }
         ]
     },
     {

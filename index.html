@@ -35,7 +35,7 @@
                 <ul id="nav-links">
                     <li><a href="./index.html">Anasayfa</a></li>
                     <li><a href="./Adaylar/index.html">2025 Adayları</a></li>
-                    <li style="opacity: 0.5; pointer-events: none;"><a href="#" onclick="return false;">Oylama (Yakında)</a></li>
+                    <li><a href="./Oylama/index.html">Oylama</a></li>
                     <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
                     <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="./assets/instagram.png" alt="instagram"></a>
                 </ul>
@@ -54,8 +54,8 @@
         </div>
 
         <div class="garagara">  
-            <button style="display: none;" class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670")'>🎟️ Bilet Al!</button>
-            <button class="btn" id="oyver" style="opacity: 0.6; cursor: not-allowed;" onclick="alert('Oylama yakında açılacaktır! 🗳️'); return false;">🗳️ Oy Ver! (Yakında)</button>
+            <button class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670")'>🎟️ Bilet Al!</button>
+            <button class="btn" id="oyver" onclick='window.location.href="./Oylama/index.html"'>🗳️ Oy Ver!</button>
         </div>
 
         <div style="text-align: center;">
@@ -71,7 +71,7 @@
 
         <script>
             // Countdown timer for voting
-            const countdownDate = new Date("Dec 10, 2024 08:00:00").getTime();
+            const countdownDate = new Date("Dec 20, 2025 23:59:59").getTime();
             const interval = setInterval(function() {
                 const now = new Date().getTime();
                 const remainingTime = countdownDate - now;
