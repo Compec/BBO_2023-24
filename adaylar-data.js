@@ -7,8 +7,8 @@ const ADAYLAR_DATA = [
         adaylar: [
             { isim: "Moka United", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/mokaunited_logo-1.png", stil: "background-color: #FFF;" },
             { isim: "Param", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/param.png", stil: "background-color: #FFF;" },
-            { isim: "Midas", fotograf: "", stil: "" },
-            { isim: "BtcTurk", fotograf: "", stil: "" }
+            { isim: "Midas", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/midas.jpeg", stil: "" },
+            { isim: "BtcTurk", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/BtcTurk_logo-2_page-0001.jpg", stil: "background-color: #FFF;" }
         ]
     },
     {
@@ -22,7 +22,7 @@ const ADAYLAR_DATA = [
             { isim: "Novus", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/novus.png", stil: "background-color: #FFF;" },
             { isim: "Virasoft", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/virasoft.jpg", stil: "" },
             { isim: "Voiser", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Voiser.png", stil: "background-color: #FFF;" },
-            { isim: "Mindra", fotograf: "", stil: "" }
+            { isim: "Mindra", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/mindra.jpg", stil: "" }
         ]
     },
     {
@@ -33,8 +33,9 @@ const ADAYLAR_DATA = [
             { isim: "BMY", fotograf: "../assets/yeniaday/EN İYİ PODCAST/BMY Logo.jpeg", stil: "" },
             { isim: "Hitmakers", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Hitmakers Logo.png", stil: "background-color: #FFF;" },
             { isim: "Kafamdakiler", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Kafamdakiler.png", stil: "background-color: #FFF;" },
-            { isim: "Mehtap Algül", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Mehtap Algül.jpg", stil: "" },
+            { isim: "Nasıl Olunur", fotograf: "../assets/yeniaday/EN İYİ PODCAST/nasılolunur.jpeg", stil: "" },
             { isim: "Ortamlarda Satılacak Bilgiler", fotograf: "../assets/yeniaday/EN İYİ PODCAST/ortamlarda satılacak bilgiler.png", stil: "" },
+            { isim: "Sadece Film İzlemiyorum", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Sadece film izlemiyorum.jpg", stil: "" },
             { isim: "Sapien", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Sapien_Logo_Horizontal.png", stil: "background-color: #FFF;" }
         ]
     },
@@ -50,7 +51,7 @@ const ADAYLAR_DATA = [
             { isim: "Omnibus", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/OmnibusLogo.jpg", stil: "" },
             { isim: "Sinemori", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sinemori_Logo_Istisnai_Kullanım.png", stil: "background-color: #000;" },
             { isim: "Sözel Tim", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sözel Tim Görsel.jpeg", stil: "" },
-            { isim: "Cansu Canan Özgen", fotograf: "", stil: "" }
+            { isim: "Cansu Canan Özgen", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/cansu canan özgan.jpeg", stil: "" }
         ]
     },
     {
@@ -81,7 +82,7 @@ const ADAYLAR_DATA = [
         kategoriId: "dijital-medya",
         formEntry: "entry.1963658691",
         adaylar: [
-            { isim: "Key People", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/keypeople.pdf", stil: "background-color: #000;" },
+            { isim: "Key People", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/keypeople_page-0001.jpg", stil: "background-color: #000;" },
             { isim: "Lychee", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/Lychee.png", stil: "background-color: #FFF;" },
             { isim: "TEM Medya", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" },
             { isim: "Viralif", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/viralif.png", stil: "background-color: #FFF;" },
@@ -94,6 +95,8 @@ const ADAYLAR_DATA = [
         formEntry: "entry.933126229",
         adaylar: [
             { isim: "Aylık Distopya", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/aylik distopya.png", stil: "background-color: #FFF;" },
+            { isim: "ColorBlockJam", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/colorblockjam.jpeg", stil: "" },
+            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" },
             { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/rollic.png", stil: "background-color: #FFF;" }
         ]
     },
@@ -103,6 +106,7 @@ const ADAYLAR_DATA = [
         formEntry: "entry.847974182",
         adaylar: [
             { isim: "Ayşe Eser", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Ayse Eser (itsayseser).jpeg", stil: "" },
+            { isim: "Bengi Apak", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/bengi apak.png", stil: "" },
             { isim: "İlkin Aydın", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/İlkin Aydın.JPG", stil: "" },
             { isim: "Melis Olcay", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Melis Olcay/WhatsApp Image 2025-11-24 at 12.52.29.jpeg", stil: "" }
         ]
@@ -117,7 +121,7 @@ const ADAYLAR_DATA = [
             { isim: "Hikayeden Adamlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hikayeden adamlar.PNG", stil: "" },
             { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linç@ arka plan.jpg", stil: "" },
             { isim: "Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/pembe yalanlar.png", stil: "" },
-            { isim: "Hayrettin Kaos Show", fotograf: "", stil: "" }
+            { isim: "Hayrettin Kaos Show", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hayrettinkaos.jpeg", stil: "" }
         ]
     },
     {
@@ -130,7 +134,7 @@ const ADAYLAR_DATA = [
             { isim: "Hype", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/hype.jpeg", stil: "" },
             { isim: "Kaanflix", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Kaanflix_1.png", stil: "background-color: #FFF;" },
             { isim: "Limonify", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/limonify.JPG", stil: "" },
-            { isim: "Panda", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/panda logo.png", stil: "background-color: #FFF;" },
+            { isim: "PintiPanda", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/panda logo.png", stil: "background-color: #FFF;" },
             { isim: "Yağmur Blash", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Yağmur Blash Dilaveroğlu.jpg", stil: "" }
         ]
     },
@@ -144,8 +148,7 @@ const ADAYLAR_DATA = [
             { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/rollic.png", stil: "background-color: #FFF;" },
             { isim: "Spyke Games", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/Spyke mor logo.png", stil: "background-color: #FFF;" },
             { isim: "TaleWorlds", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/TW_initials_white.png", stil: "background-color: #000;" },
-            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" },
-            { isim: "Rogue Duck Interactive", fotograf: "", stil: "" }
+            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" }
         ]
     },
     {
@@ -154,13 +157,13 @@ const ADAYLAR_DATA = [
         formEntry: "entry.579430180",
         adaylar: [
             { isim: "Bufuak", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/bufuak.png", stil: "" },
-            { isim: "Burak Şahin", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/buraksahin364.png", stil: "" },
+            { isim: "Burak Oyunda", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/buraksahin364.png", stil: "" },
             { isim: "Emin Çıtak", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/Emin Çıtak.jpg", stil: "" },
             { isim: "Marcus7z", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/marcus7z.png", stil: "" },
             { isim: "Tunca Arslan", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/tunca arslan.jpg", stil: "" },
             { isim: "zSuat", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/zSuat 3.png", stil: "" },
-            { isim: "Tosbaa", fotograf: "", stil: "" },
-            { isim: "Disket Kutusu", fotograf: "", stil: "" }
+            { isim: "Tosbaa", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/tosbaa.png", stil: "" },
+            { isim: "Disket Kutusu", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/disketkutusu.jpeg", stil: "" }
         ]
     },
     {
@@ -168,6 +171,7 @@ const ADAYLAR_DATA = [
         kategoriId: "teknoloji",
         formEntry: "entry.586415959",
         adaylar: [
+            { isim: "Ahmet Emre", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/Ahmet-Emre.jpg", stil: "" },
             { isim: "Ayhan Tarakçı", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/ayhan tarakcı.JPG", stil: "" },
             { isim: "Mehmet Üzüm", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/profil-fotoğraf-mehmet-üzüm.png", stil: "" },
             { isim: "Osman Furkan Şahin", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/osman furkan şahin.png", stil: "" },
@@ -179,11 +183,13 @@ const ADAYLAR_DATA = [
         kategoriId: "yilin-oyunu",
         formEntry: "entry.352552845",
         adaylar: [
+            { isim: "Feather Party", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/featherparty.png", stil: "" },
             { isim: "Holy Shoot", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Holy Shoot - Tale Era Interactive/HolyShoot_Logo.png", stil: "background-color: #FFF;" },
-            { isim: "Leila", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Leila-Ubik Studios", stil: "background-color: #000;" },
+            { isim: "Leila", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Leila-Logo.png", stil: "background-color: #000;" },
             { isim: "Lost Lullabies", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/lost lullabies.png", stil: "" },
             { isim: "Supermarket Simulator", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/supermarket simulator.png", stil: "" },
-            { isim: "Zort", fotograf: "", stil: "" }
+            { isim: "To Pixelia", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/pixelia.png", stil: "" },
+            { isim: "Zort", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/zort.jpeg", stil: "" }
         ]
     },
 ];
