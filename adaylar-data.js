@@ -108,7 +108,8 @@ const ADAYLAR_DATA = [
             { isim: "Ayşe Eser", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Ayse Eser (itsayseser).jpeg", stil: "" },
             { isim: "Bengi Apak", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/bengi apak.png", stil: "" },
             { isim: "İlkin Aydın", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/İlkin Aydın.JPG", stil: "" },
-            { isim: "Melis Olcay", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Melis Olcay/WhatsApp Image 2025-11-24 at 12.52.29.jpeg", stil: "" }
+            { isim: "Melis Olcay", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Melis Olcay/WhatsApp Image 2025-11-24 at 12.52.29.jpeg", stil: "" },
+            { isim: "Demet Ün", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/okudemedim.jpg", stil: "" }
         ]
     },
     {
@@ -119,7 +120,7 @@ const ADAYLAR_DATA = [
             { isim: "Berfu Yenenler ile Talk Show Perileri", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/berfu yenenler ile talk show perileri.jpg", stil: "" },
             { isim: "Crossover Talks", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/Crossover Talks logo insta profil resmi.png", stil: "" },
             { isim: "Hikayeden Adamlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hikayeden adamlar.PNG", stil: "" },
-            { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linç@ arka plan.jpg", stil: "" },
+            { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linc_logo_page-0001.jpg", stil: "" },
             { isim: "Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/pembe yalanlar.png", stil: "" },
             { isim: "Hayrettin Kaos Show", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hayrettinkaos.jpeg", stil: "" }
         ]
