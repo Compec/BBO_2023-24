@@ -96,8 +96,8 @@ const ADAYLAR_DATA = [
         adaylar: [
             { isim: "Aylık Distopya", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/aylik distopya.png", stil: "background-color: #FFF;" },
             { isim: "ColorBlockJam", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/colorblockjam.jpeg", stil: "" },
-            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" },
-            { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/rollic.png", stil: "background-color: #FFF;" }
+            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" }
+            
         ]
     },
     {
@@ -109,7 +109,7 @@ const ADAYLAR_DATA = [
             { isim: "Bengi Apak", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/bengi apak.png", stil: "" },
             { isim: "İlkin Aydın", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/İlkin Aydın.JPG", stil: "" },
             { isim: "Melis Olcay", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Melis Olcay/WhatsApp Image 2025-11-24 at 12.52.29.jpeg", stil: "" },
-            { isim: "Demet Ün", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/okudemedim.jpg", stil: "" }
+            { isim: "Demet Ün", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/okudemedim.JPG", stil: "" }
         ]
     },
     {
