@@ -65,7 +65,7 @@ const ADAYLAR_DATA = [
             { isim: "Beyza Şen", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Beyza şen.JPG", stil: "" },
             { isim: "Bilge Özşar", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Bilge Özşar1.jpeg", stil: "" },
             { isim: "Deniz Altun", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Deniz Altun.PNG", stil: "" },
-            { isim: "Fulden Akyan", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Fulden Akyan.jpeg", stil: "" },
+            { isim: "Fulden Darama Hurma", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Fulden Akyan.jpeg", stil: "" },
             { isim: "Gamze Şakar", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Gamze şakar.JPG", stil: "" },
             { isim: "Gizem Nur Büyükkara", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Gizem Nur Büyükkara Gözü.jpg", stil: "" },
             { isim: "IVGEN", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/IVGEN .JPG", stil: "" },
@@ -78,13 +78,13 @@ const ADAYLAR_DATA = [
         ]
     },
     {
-        kategori: "En İyi Dijital Medya",
+        kategori: "En İyi Dijital Medya Ve Menajerlik",
         kategoriId: "dijital-medya",
         formEntry: "entry.1963658691",
         adaylar: [
             { isim: "Key People", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/keypeople_page-0001.jpg", stil: "background-color: #000;" },
             { isim: "Lychee", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/Lychee.png", stil: "background-color: #FFF;" },
-            { isim: "TEM Medya", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" },
+            { isim: "TEM Network", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" },
             { isim: "Viralif", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/viralif.png", stil: "background-color: #FFF;" },
             { isim: "Yours", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/YOURS BEYAZ.png", stil: "background-color: #000;" }
         ]
@@ -96,8 +96,7 @@ const ADAYLAR_DATA = [
         adaylar: [
             { isim: "Aylık Distopya", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/aylik distopya.png", stil: "background-color: #FFF;" },
             { isim: "ColorBlockJam", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/colorblockjam.jpeg", stil: "" },
-            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" }
-            
+            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" }     
         ]
     },
     {
@@ -121,7 +120,7 @@ const ADAYLAR_DATA = [
             { isim: "Crossover Talks", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/Crossover Talks logo insta profil resmi.png", stil: "" },
             { isim: "Hikayeden Adamlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hikayeden adamlar.PNG", stil: "" },
             { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linc_logo_page-0001.jpg", stil: "" },
-            { isim: "Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/pembe yalanlar.png", stil: "" },
+            { isim: "Orkun Işıtmak - Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/orkun.jpeg", stil: "" },
             { isim: "Hayrettin Kaos Show", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hayrettinkaos.jpeg", stil: "" }
         ]
     },
@@ -136,7 +135,7 @@ const ADAYLAR_DATA = [
             { isim: "Kaanflix", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Kaanflix_1.png", stil: "background-color: #FFF;" },
             { isim: "Limonify", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/limonify.JPG", stil: "" },
             { isim: "PintiPanda", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/panda logo.png", stil: "background-color: #FFF;" },
-            { isim: "Yağmur Blash", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Yağmur Blash Dilaveroğlu.jpg", stil: "" }
+            { isim: "Yağmur Blush", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Yağmur Blash Dilaveroğlu.jpg", stil: "" }
         ]
     },
     {
