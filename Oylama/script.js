@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="thank-you-container" style="display: block;">
                         <h2>🎉 Teşekkürler!</h2>
                         <p>Oy kullandığınız için çok teşekkür ederiz!</p>
-                        <p>14 Aralık'taki zirvemize de bekleriz! 🙌</p>
+                        <p>20 Aralık'taki zirvemize de bekleriz! 🙌</p>
                         <br>
                         <button onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
                     </div>
