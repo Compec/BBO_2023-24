@@ -15,41 +15,5 @@
   };
 
 
-// ══════════════════════════════════════════════════════════
-// KURULUM TALİMATLARI
-// ══════════════════════════════════════════════════════════
-/*
-1. Firebase Console'a git: https://console.firebase.google.com/
-2. Yeni proje oluştur veya mevcut projeyi seç
-3. "Web App" ekle (</> simgesi)
-4. Config bilgilerini kopyala ve yukarıya yapıştır
-5. Firestore Database'i etkinleştir:
-   - Build → Firestore Database → Create Database
-   - "Start in production mode" seç
-   - Region seç (europe-west1 önerilir)
-   
-6. Firestore Rules'ı güncelle:
-   
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       // Votes collection - sadece yazma izni
-       match /votes/{document=**} {
-         allow read: if false;  // Kimse okuyamaz
-         allow write: if true;  // Herkes yazabilir
-       }
-       
-       // Device votes - cihaz kontrolü için
-       match /device_votes/{deviceId} {
-         allow read: if request.auth == null;  // Herkes okuyabilir
-         allow write: if request.auth == null; // Herkes yazabilir
-       }
-     }
-   }
-
-7. Index oluştur (performans için):
-   - Firestore → Indexes → Create Index
-   - Collection ID: device_votes
-   - Field: deviceId (Ascending)
-   - Query scope: Collection
+/*selam
 */

@@ -84,9 +84,9 @@ const ADAYLAR_DATA = [
         adaylar: [
             { isim: "Key People", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/keypeople_page-0001.jpg", stil: "background-color: #000;" },
             { isim: "Lychee", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/Lychee.png", stil: "background-color: #FFF;" },
-            { isim: "TEM Network", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" },
+            { isim: "Yours", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/YOURS BEYAZ.png", stil: "background-color: #000;" },
             { isim: "Viralif", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/viralif.png", stil: "background-color: #FFF;" },
-            { isim: "Yours", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/YOURS BEYAZ.png", stil: "background-color: #000;" }
+            { isim: "TEM Network", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" }
         ]
     },
     {
