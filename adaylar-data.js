@@ -16,7 +16,7 @@ const ADAYLAR_DATA = [
         kategoriId: "yapay-zeka",
         formEntry: "entry.945115466",
         adaylar: [
-            { isim: "Weacces", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Logo Weacces - Black - Vertc.png", stil: "background-color: #FFF;" },
+            { isim: "WeAccess.Ai", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Logo Weacces - Black - Vertc.png", stil: "background-color: #FFF;" },
             { isim: "Madlen", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/madlen.png", stil: "background-color: #FFF;" },
             { isim: "Move ON", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/moveon_logo_b_with_r.png", stil: "background-color: #FFF;" },
             { isim: "Novus", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/novus.png", stil: "background-color: #FFF;" },
