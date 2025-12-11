@@ -143,12 +143,6 @@ function updateNavigationButtons() {
 function navigate(direction) {
     const currentQuestion = document.getElementById('question' + currentStep);
 
-    // İleri giderken cevap kontrolü yap
-    if (direction > 0 && !isQuestionAnswered(currentStep)) {
-        alert("Lütfen bir adayı oylayın.");
-        return;
-    }
-
     currentQuestion.classList.remove('active');
               
     currentStep += direction;
