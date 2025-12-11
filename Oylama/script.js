@@ -42,61 +42,11 @@ document.addEventListener('DOMContentLoaded', async function() {
     deviceFingerprint = await getDeviceFingerprint();
     console.log('Cihaz ID:', deviceFingerprint);
     
-    // Kullanıcı daha önce oy verdiyse kontrol et
-    await checkIfAlreadyVoted();
-    
     // Form sorularını oluştur
     generateQuestions();
 });
 
-// Kullanıcının daha önce oy verip vermediğini kontrol et
-async function checkIfAlreadyVoted() {
-    try {
-        // Firestore'dan kontrol et
-        const deviceRef = db.collection('device_votes').doc(deviceFingerprint);
-        const doc = await deviceRef.get();
-        
-        if (doc.exists && doc.data().voted === true) {
-            // Kullanıcı zaten oy vermiş - Formu gizle ve mesaj göster
-            const voteDate = doc.data().voteDate?.toDate();
-            const dateStr = voteDate ? voteDate.toLocaleDateString('tr-TR') : '';
-            
-            document.getElementById('welcomePage').style.display = 'none';
-            document.getElementById('step1').innerHTML = `
-                <div style="text-align: center; padding: 60px 20px;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">✅ Oy Kullandınız!</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;">Bu cihazdan daha önce oy kullanılmış.</p>
-                    ${dateStr ? `<p style="font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Oy tarihi: ${dateStr}</p>` : ''}
-                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Her cihaz sadece bir kez oy kullanabilir.</p>
-                    <p style="font-size: 1.3rem; margin-bottom: 40px;">Katılımınız için teşekkür ederiz! 🎉</p>
-                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
-                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.location.href="../index.html"'>🏠 Ana Sayfaya Dön</button>
-                </div>
-            `;
-            return true;
-        }
-        return false;
-    } catch (error) {
-        console.error('Oy kontrolü hatası:', error);
-        // Hata durumunda localStorage'a da bak
-        const voted = localStorage.getItem('bbo_voted_' + deviceFingerprint);
-        if (voted === 'true') {
-            document.getElementById('welcomePage').style.display = 'none';
-            document.getElementById('step1').innerHTML = `
-                <div style="text-align: center; padding: 60px 20px;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">✅ Oy Kullandınız!</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;">Bu cihazdan daha önce oy kullanılmış.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Her cihaz sadece bir kez oy kullanabilir.</p>
-                    <p style="font-size: 1.3rem; margin-bottom: 40px;">Katılımınız için teşekkür ederiz! 🎉</p>
-                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670", "_blank")'>🎟️ Bilet Al!</button>
-                    <button style="padding: 15px 40px; font-size: 1.1rem; margin: 10px;" onclick='window.location.href="../index.html"'>🏠 Ana Sayfaya Dön</button>
-                </div>
-            `;
-            return true;
-        }
-        return false;
-    }
-}
+
 
 // Formun başlaması
 function startForm() {
@@ -153,6 +103,11 @@ function generateQuestions() {
             label.appendChild(img);
             label.appendChild(document.createElement('br'));
             label.appendChild(document.createTextNode(aday.isim));
+            
+            // Tüm kareye tıklanabilir yap
+            candidateDiv.onclick = function() {
+                input.checked = true;
+            };
             
             candidateDiv.appendChild(input);
             candidateDiv.appendChild(label);
@@ -270,17 +225,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 await db.collection('votes').add(voteData);
                 console.log('✅ Oy kaydedildi');
                 
-                // Cihaz bilgisini kaydet (tekrar oy kullanımını engellemek için)
-                await db.collection('device_votes').doc(deviceFingerprint).set({
-                    voted: true,
-                    voteDate: firebase.firestore.FieldValue.serverTimestamp(),
-                    timestamp: new Date()
-                });
-                console.log('✅ Cihaz kaydedildi');
+                // Cihaz bilgisini güncelle - her oyda oy sayısını artır
+                const deviceRef = db.collection('device_votes').doc(deviceFingerprint);
+                const deviceDoc = await deviceRef.get();
                 
-                // LocalStorage'a da kaydet (fallback)
-                localStorage.setItem('bbo_voted_' + deviceFingerprint, 'true');
-                localStorage.setItem('bbo_vote_date_' + deviceFingerprint, new Date().toISOString());
+                if (deviceDoc.exists) {
+                    // Mevcut cihaz - oy sayısını artır
+                    await deviceRef.update({
+                        voteCount: firebase.firestore.FieldValue.increment(1),
+                        lastVoteDate: firebase.firestore.FieldValue.serverTimestamp(),
+                        lastVoteTimestamp: new Date()
+                    });
+                } else {
+                    // Yeni cihaz - ilk oy
+                    await deviceRef.set({
+                        deviceId: deviceFingerprint,
+                        voteCount: 1,
+                        firstVoteDate: firebase.firestore.FieldValue.serverTimestamp(),
+                        lastVoteDate: firebase.firestore.FieldValue.serverTimestamp(),
+                        firstVoteTimestamp: new Date(),
+                        lastVoteTimestamp: new Date(),
+                        userAgent: navigator.userAgent
+                    });
+                }
+                console.log('✅ Cihaz bilgisi güncellendi');
                 
                 // Teşekkür mesajı göster
                 document.getElementById('multiStepForm').innerHTML = `
