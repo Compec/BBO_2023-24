@@ -1,0 +1,12 @@
+# Sonuç/yönetici panelleri siteye asla yüklenmez.
+# Yerel panel repo dışında tutulur: ../compec-sonuclar.html
+sonuclar.html
+**/sonuclar.html
+vote-results.html
+database-viewer.html
+
+# Yedekler ve geçici dosyalar
+backup-*.json
+node_modules/
+.DS_Store
+Thumbs.db

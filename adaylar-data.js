@@ -1,196 +1,180 @@
-// Tüm adaylar ve kategoriler bu dosyada tanımlanır
+// ══════════════════════════════════════════════════════════
+// COMPEC BİLİŞİM ÖDÜLLERİ 2026 — ADAYLAR
+// Tüm kategoriler ve adaylar bu dosyada tanımlanır.
+// Adaylar sayfası ve oylama sayfası bu dosyayı okur.
+// ══════════════════════════════════════════════════════════
 const ADAYLAR_DATA = [
     {
-        kategori: "En İyi Fintech Şirketi",
-        kategoriId: "fintech",
-        formEntry: "entry.3318643",
+        kategori: "Sosyal Medyayı En İyi Kullanan Marka",
+        kategoriId: "marka",
         adaylar: [
-            { isim: "Moka United", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/mokaunited_logo-1.png", stil: "background-color: #FFF;" },
-            { isim: "Param", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/param.png", stil: "background-color: #FFF;" },
-            { isim: "Midas", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/midas.jpeg", stil: "" },
-            { isim: "BtcTurk", fotograf: "../assets/yeniaday/EN İYİ FINTECH ŞİRKETİ/BtcTurk_logo-2_page-0001.jpg", stil: "background-color: #FFF;" }
+            { isim: "Züber", fotograf: "../assets/aday2026/marka/zuber.jpg", stil: "background-color: #FFF;" },
+            { isim: "Duolingo", fotograf: "../assets/aday2026/marka/duolingo.jpg", stil: "background-color: #FFF;" },
+            { isim: "Superfresh", fotograf: "../assets/aday2026/marka/superfresh.png", stil: "background-color: #FFF;" },
+            { isim: "Indomie", fotograf: "../assets/aday2026/marka/indomie.png", stil: "background-color: #FFF;" },
+            { isim: "Flying Tiger Copenhagen", fotograf: "../assets/aday2026/marka/flying-tiger-copenhagen.png", stil: "background-color: #FFF;" }
         ]
     },
     {
-        kategori: "En İyi Yapay Zeka Girişimi",
-        kategoriId: "yapay-zeka",
-        formEntry: "entry.945115466",
+        kategori: "En İyi E-Ticaret Uygulaması",
+        kategoriId: "e-ticaret",
         adaylar: [
-            { isim: "WeAccess.Ai", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Logo Weacces - Black - Vertc.png", stil: "background-color: #FFF;" },
-            { isim: "Madlen", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/madlen.png", stil: "background-color: #FFF;" },
-            { isim: "Move ON", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/moveon_logo_b_with_r.png", stil: "background-color: #FFF;" },
-            { isim: "Voiser", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/Voiser.png", stil: "background-color: #FFF;" },
-            { isim: "Novus", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/novus.png", stil: "background-color: #FFF;" },
-            { isim: "Virasoft", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/virasoft.jpg", stil: "" },
-            { isim: "Mindra", fotograf: "../assets/yeniaday/EN İYİ YAPAY ZEKA GİRİŞİMİ/mindra.jpg", stil: "" }
+            { isim: "Hepsiburada", fotograf: "../assets/aday2026/e-ticaret/hepsiburada.png", stil: "background-color: #FFF;" },
+            { isim: "Sahibinden", fotograf: "../assets/aday2026/e-ticaret/sahibinden.png", stil: "background-color: #FFF;" },
+            { isim: "Pazarama", fotograf: "../assets/aday2026/e-ticaret/pazarama.jpg", stil: "" }
         ]
     },
     {
-        kategori: "En İyi Podcast",
-        kategoriId: "podcast",
-        formEntry: "entry.1293755096",
-        adaylar: [
-            { isim: "BMY", fotograf: "../assets/yeniaday/EN İYİ PODCAST/BMY Logo.jpeg", stil: "" },
-            { isim: "Hitmakers", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Hitmakers Logo.png", stil: "background-color: #FFF;" },
-            { isim: "Kafamdakiler", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Kafamdakiler.png", stil: "background-color: #FFF;" },
-            { isim: "Nasıl Olunur", fotograf: "../assets/yeniaday/EN İYİ PODCAST/nasılolunur.jpeg", stil: "" },
-            { isim: "Ortamlarda Satılacak Bilgiler", fotograf: "../assets/yeniaday/EN İYİ PODCAST/ortamlarda satılacak bilgiler.png", stil: "" },
-            { isim: "Sadece Film İzlemiyorum", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Sadece film izlemiyorum.jpg", stil: "" },
-            { isim: "Sapien", fotograf: "../assets/yeniaday/EN İYİ PODCAST/Sapien_Logo_Horizontal.png", stil: "background-color: #FFF;" }
-        ]
-    },
-    {
-        kategori: "En İyi YouTube İçerik Üreticisi",
-        kategoriId: "youtube",
-        formEntry: "entry.1578581061",
-        adaylar: [
-            { isim: "Atik Ailesi", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/AtikAilesi.PNG", stil: "" },
-            { isim: "Çakal Lezzetler", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/CakalLezzetler.jpg", stil: "" },
-            { isim: "Drama Pasta", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/drama pasta ikon.png", stil: "background-color: #FFF;" },
-            { isim: "Evrim Ağacı", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Evrim Ağacı Logo.png", stil: "background-color: #FFF;" },
-            { isim: "Omnibus", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/OmnibusLogo.jpg", stil: "" },
-            { isim: "Sinemori", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sinemori_Logo_Istisnai_Kullanım.png", stil: "background-color: #000;" },
-            { isim: "Sözel Tim", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/Sözel Tim Görsel.jpeg", stil: "" },
-            { isim: "Cansu Canan Özgen", fotograf: "../assets/yeniaday/EN İYİ YOUTUBE İÇERİK ÜRETİCİSİ/cansu canan özgan.jpeg", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Sosyal Medya İçerik Üreticisi",
-        kategoriId: "sosyal-medya",
-        formEntry: "entry.83290777",
-        adaylar: [
-            { isim: "26 Piksel", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/26piksel/26Piksel - Logo Kırmızı.png", stil: "background-color: #FFF;" },
-            { isim: "Barış Ali (latenighter)", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Barış Ali (latenighter).jpeg", stil: "" },
-            { isim: "Bengü Tiryaki", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Bengü Tiryaki.jpg", stil: "" },
-            { isim: "Beyza Şen", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Beyza şen.JPG", stil: "" },
-            { isim: "Bilge Özşar", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Bilge Özşar1.jpeg", stil: "" },
-            { isim: "Deniz Altun", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Deniz Altun.PNG", stil: "" },
-            { isim: "Fulden Darama Hurma", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Fulden Akyan.jpeg", stil: "" },
-            { isim: "Gamze Şakar", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Gamze şakar.JPG", stil: "" },
-            { isim: "Gizem Nur Büyükkara", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Gizem Nur Büyükkara Gözü.jpg", stil: "" },
-            { isim: "IVGEN", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/IVGEN .JPG", stil: "" },
-            { isim: "Kendimi Boyuyorum", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Kendimi Boyuyorum (Ayşenur).jpeg", stil: "" },
-            { isim: "Normaldiil", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Normaldiil.jpeg", stil: "" },
-            { isim: "Sabit Doğan", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/sabit doğan/121257-043.JPG", stil: "" },
-            { isim: "Serra Kardeş", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Serra Kardeş.jpeg", stil: "" },
-            { isim: "Tam Kararında", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/Tam Kararında (Kaan Yarman).jpeg", stil: "" },
-            { isim: "Ömer Talha Çubuk", fotograf: "../assets/yeniaday/EN İYİ SOSYAL MEDYA İÇERİK ÜRETİCİSİ/ömer talha çubuk.jpg", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Dijital Medya Ve Menajerlik",
+        kategori: "En İyi Dijital Medya ve Menajerlik",
         kategoriId: "dijital-medya",
-        formEntry: "entry.1963658691",
         adaylar: [
-            { isim: "Key People", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/keypeople_page-0001.jpg", stil: "background-color: #000;" },
-            { isim: "Lychee", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/Lychee.png", stil: "background-color: #FFF;" },
-            { isim: "Yours", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/YOURS BEYAZ.png", stil: "background-color: #000;" },
-            { isim: "Viralif", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/viralif.png", stil: "background-color: #FFF;" },
-            { isim: "TEM Network", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL MEDYA/TEM-Yeni_Logo_Beyaz.png", stil: "background-color: #000;" }
+            { isim: "TEM Network", fotograf: "../assets/aday2026/dijital-medya/tem-network.png", stil: "background-color: #000;" },
+            { isim: "Viralif", fotograf: "../assets/aday2026/dijital-medya/viralif.png", stil: "background-color: #FFF;" },
+            { isim: "Key People and Project", fotograf: "../assets/aday2026/dijital-medya/key-people-and-project.jpg", stil: "" },
+            { isim: "Hypers", fotograf: "../assets/aday2026/dijital-medya/hypers.png", stil: "background-color: #FFF;" },
+            { isim: "Lychee", fotograf: "../assets/aday2026/dijital-medya/lychee.jpg", stil: "" },
+            { isim: "Influera", fotograf: "../assets/aday2026/dijital-medya/influera.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Mobil Bankacılık Uygulaması",
+        kategoriId: "mobil-bankacilik",
+        adaylar: [
+            { isim: "Akbank", fotograf: "../assets/aday2026/mobil-bankacilik/akbank.jpg", stil: "" },
+            { isim: "Garanti BBVA", fotograf: "../assets/aday2026/mobil-bankacilik/garanti-bbva.jpg", stil: "" },
+            { isim: "Yapı Kredi", fotograf: "../assets/aday2026/mobil-bankacilik/yapi-kredi.jpg", stil: "" }
         ]
     },
     {
         kategori: "En İyi Mobil Oyun",
         kategoriId: "mobil-oyun",
-        formEntry: "entry.933126229",
         adaylar: [
-            { isim: "Aylık Distopya", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/aylik distopya.png", stil: "background-color: #FFF;" },
-            { isim: "ColorBlockJam", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/colorblockjam.jpeg", stil: "" },
-            { isim: "Oddmar", fotograf: "../assets/yeniaday/EN İYİ MOBİL OYUN/Oddmar Key Art.png", stil: "" }     
-        ]
-    },
-    {
-        kategori: "Sosyal Medyayı En Etkin Kullanan Ünlü",
-        kategoriId: "unlu",
-        formEntry: "entry.847974182",
-        adaylar: [
-            { isim: "Ayşe Eser", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Ayse Eser (itsayseser).jpeg", stil: "" },
-            { isim: "Bengi Apak", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/bengi apak.png", stil: "" },
-            { isim: "İlkin Aydın", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/İlkin Aydın.JPG", stil: "" },
-            { isim: "Melis Olcay", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/Melis Olcay/WhatsApp Image 2025-11-24 at 12.52.29.jpeg", stil: "" },
-            { isim: "Demet Ün", fotograf: "../assets/yeniaday/SOSYAL MEDYAYI EN ETKİN KULLANAN ÜNLÜ/okudemedim.JPG", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Dijital Talk Show",
-        kategoriId: "talk-show",
-        formEntry: "entry.398401933",
-        adaylar: [
-            { isim: "Berfu Yenenler ile Talk Show Perileri", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/berfu yenenler ile talk show perileri.jpg", stil: "" },
-            { isim: "Crossover Talks", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/Crossover Talks logo insta profil resmi.png", stil: "" },
-            { isim: "Hikayeden Adamlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hikayeden adamlar.PNG", stil: "" },
-            { isim: "Linç@", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/linc_logo_page-0001.jpg", stil: "" },
-            { isim: "Orkun Işıtmak - Pembe Yalanlar", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/orkun.jpeg", stil: "" },
-            { isim: "Hayrettin Kaos Show", fotograf: "../assets/yeniaday/EN İYİ DİJİTAL TALK SHOW/hayrettinkaos.jpeg", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Online Yayıncı",
-        kategoriId: "online-yayinci",
-        formEntry: "entry.195216280",
-        adaylar: [
-            { isim: "Eldorina", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/eldorina.jpg", stil: "" },
-            { isim: "Eray", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/eray.jpg", stil: "" },
-            { isim: "Hype", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/hype.jpeg", stil: "" },
-            { isim: "Kaanflix", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Kaanflix_1.png", stil: "background-color: #FFF;" },
-            { isim: "Limonify", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/limonify.JPG", stil: "" },
-            { isim: "PintiPanda", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/panda logo.png", stil: "background-color: #FFF;" },
-            { isim: "Yağmur Blush", fotograf: "../assets/yeniaday/EN İYİ ONLINE YAYINCI/Yağmur Blash Dilaveroğlu.jpg", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Oyun Geliştirme Şirketi",
-        kategoriId: "oyun-gelistirme",
-        formEntry: "entry.251135276",
-        adaylar: [
-            { isim: "Nokta Games", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/Nokta-games-logo-1.png", stil: "background-color: #FFF;" },
-            { isim: "Rogue Duck", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/rogue dock.png", stil: "background-color: #FFF;" },
-            { isim: "Rollic", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/rollic.png", stil: "background-color: #FFF;" },
-            { isim: "Spyke Games", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/Spyke mor logo.png", stil: "background-color: #FFF;" },
-            { isim: "TaleWorlds", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/TW_initials_white.png", stil: "background-color: #000;" },
-            { isim: "Ubik Studios", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/ubik studios.svg", stil: "background-color: #FFF;" },
-            { isim: "Teneke Kafalar", fotograf: "../assets/yeniaday/EN İYİ OYUN GELİŞTİRME ŞİRKETİ/tenekekafalar.png", stil: "background-color: #FFF;" }
-        ]
-    },
-    {
-        kategori: "En İyi Oyun İçerik Üreticisi",
-        kategoriId: "oyun-icerik",
-        formEntry: "entry.579430180",
-        adaylar: [
-            { isim: "Bufuak", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/bufuak.png", stil: "" },
-            { isim: "Burak Oyunda", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/buraksahin364.png", stil: "" },
-            { isim: "Emin Çıtak", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/Emin Çıtak.jpg", stil: "" },
-            { isim: "Marcus7z", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/marcus7z.png", stil: "" },
-            { isim: "Tunca Arslan", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/tunca arslan.jpg", stil: "" },
-            { isim: "zSuat", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/zSuat 3.png", stil: "" },
-            { isim: "Tosbaa", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/tosbaa.png", stil: "" },
-            { isim: "Disket Kutusu", fotograf: "../assets/yeniaday/EN İYİ OYUN İÇERİK ÜRETİCİSİ/disketkutusu.jpeg", stil: "" }
-        ]
-    },
-    {
-        kategori: "En İyi Teknoloji İçerik Üreticisi",
-        kategoriId: "teknoloji",
-        formEntry: "entry.586415959",
-        adaylar: [
-            { isim: "Ahmet Emre", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/Ahmet-Emre.jpg", stil: "" },
-            { isim: "Ayhan Tarakçı", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/ayhan tarakcı.JPG", stil: "" },
-            { isim: "Mehmet Üzüm", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/profil-fotoğraf-mehmet-üzüm.png", stil: "" },
-            { isim: "Osman Furkan Şahin", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/osman furkan şahin.png", stil: "" },
-            { isim: "Tolga Özuygur", fotograf: "../assets/yeniaday/EN İYİ TEKNOLOJİ İÇERİK ÜRETİCİSİ/tolga özuygur.jpg", stil: "" }
+            { isim: "Raid Rush", fotograf: "../assets/aday2026/mobil-oyun/raid-rush.png", stil: "" },
+            { isim: "TC Simülasyonu", fotograf: "../assets/aday2026/mobil-oyun/tc-simulasyonu.jpg", stil: "" },
+            { isim: "Arcane Arena", fotograf: "../assets/aday2026/mobil-oyun/arcane-arena.png", stil: "" }
         ]
     },
     {
         kategori: "Yılın En İyi Oyunu",
         kategoriId: "yilin-oyunu",
-        formEntry: "entry.352552845",
         adaylar: [
-            { isim: "Feather Party", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/featherparty.png", stil: "" },
-            { isim: "Holy Shoot", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Holy Shoot - Tale Era Interactive/HolyShoot_Logo.png", stil: "background-color: #FFF;" },
-            { isim: "Leila", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/Leila-Logo.png", stil: "background-color: #000;" },
-            { isim: "Lost Lullabies", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/lost lullabies.png", stil: "" },
-            { isim: "Supermarket Simulator", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/supermarket simulator.png", stil: "" },
-            { isim: "To Pixelia", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/pixelia.png", stil: "" },
-            { isim: "Zort", fotograf: "../assets/yeniaday/YILIN EN İYİ OYUNU/zort.jpeg", stil: "" }
+            { isim: "Celestial Return", fotograf: "../assets/aday2026/yilin-oyunu/celestial-return.jpg", stil: "" },
+            { isim: "Harvest King", fotograf: "../assets/aday2026/yilin-oyunu/harvest-king.jpg", stil: "" },
+            { isim: "Iron Blight", fotograf: "../assets/aday2026/yilin-oyunu/iron-blight.png", stil: "" },
+            { isim: "Lost in Art: A Miniature Realm", fotograf: "../assets/aday2026/yilin-oyunu/lost-in-art-a-miniature-realm.png", stil: "background-color: #000;" },
+            { isim: "This is Fine: Maximum Cope", fotograf: "../assets/aday2026/yilin-oyunu/this-is-fine-maximum-cope.jpg", stil: "" },
+            { isim: "Bombanana", fotograf: "../assets/aday2026/yilin-oyunu/bombanana.jpg", stil: "" }
         ]
     },
+    {
+        kategori: "En İyi Oyun İçerik Üreticisi",
+        kategoriId: "oyun-icerik",
+        adaylar: [
+            { isim: "Disket Kutusu", fotograf: "../assets/aday2026/oyun-icerik/disket-kutusu.jpg", stil: "" },
+            { isim: "Konsol Oyun", fotograf: "../assets/aday2026/oyun-icerik/konsol-oyun.jpg", stil: "" },
+            { isim: "CombatRY", fotograf: "../assets/aday2026/oyun-icerik/combatry.jpg", stil: "" },
+            { isim: "Atacan İlkin Tansel", fotograf: "../assets/aday2026/oyun-icerik/atacan-ilkin-tansel.jpg", stil: "" },
+            { isim: "Tunca Arslan", fotograf: "../assets/aday2026/oyun-icerik/tunca-arslan.jpg", stil: "" },
+            { isim: "Bufuak", fotograf: "../assets/aday2026/oyun-icerik/bufuak.jpg", stil: "" },
+            { isim: "Marcus7z", fotograf: "../assets/aday2026/oyun-icerik/marcus7z.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Podcast Serisi",
+        kategoriId: "podcast",
+        adaylar: [
+            { isim: "Haddini Aşan Yaşam Rehberi", fotograf: "../assets/aday2026/podcast/haddini-asan-yasam-rehberi.jpg", stil: "" },
+            { isim: "Ortamda Satılacak Bilgi", fotograf: "../assets/aday2026/podcast/ortamda-satilacak-bilgi.jpg", stil: "" },
+            { isim: "Sapien Podcast", fotograf: "../assets/aday2026/podcast/sapien-podcast.png", stil: "background-color: #FFF;" },
+            { isim: "Kendine İyi Davran", fotograf: "../assets/aday2026/podcast/kendine-iyi-davran.png", stil: "background-color: #FFF;" },
+            { isim: "Yemekte Bile Yemek Konuşuruz", fotograf: "../assets/aday2026/podcast/yemekte-bile-yemek-konusuruz.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi YouTube İçerik Üreticisi",
+        kategoriId: "youtube",
+        adaylar: [
+            { isim: "49W", fotograf: "../assets/aday2026/youtube/49w.jpg", stil: "background-color: #FFF;" },
+            { isim: "Ben Gitmek İstiyorum", fotograf: "../assets/aday2026/youtube/ben-gitmek-istiyorum.jpg", stil: "" },
+            { isim: "Burak Aktürk", fotograf: "../assets/aday2026/youtube/burak-akturk.jpg", stil: "" },
+            { isim: "DFT Tarih", fotograf: "../assets/aday2026/youtube/dft-tarih.png", stil: "" },
+            { isim: "Atakan ve Cemile", fotograf: "../assets/aday2026/youtube/atakan-ve-cemile.jpg", stil: "" },
+            { isim: "Soğuk Savaş", fotograf: "../assets/aday2026/youtube/soguk-savas.png", stil: "background-color: #FFF;" }
+        ]
+    },
+    {
+        kategori: "En İyi Sosyal Medya İçerik Üreticisi",
+        kategoriId: "sosyal-medya",
+        adaylar: [
+            { isim: "Havva Hacıfazlıoğlu", fotograf: "../assets/aday2026/sosyal-medya/havva-hacifazlioglu.jpg", stil: "" },
+            { isim: "Bilge Özşar", fotograf: "../assets/aday2026/sosyal-medya/bilge-ozsar.jpg", stil: "" },
+            { isim: "Umut Metin", fotograf: "../assets/aday2026/sosyal-medya/umut-metin.jpg", stil: "" },
+            { isim: "Ata Tekiner", fotograf: "../assets/aday2026/sosyal-medya/ata-tekiner.jpg", stil: "" },
+            { isim: "Ece Çetinöz", fotograf: "../assets/aday2026/sosyal-medya/ece-cetinoz.jpg", stil: "" },
+            { isim: "İpek Ersan", fotograf: "../assets/aday2026/sosyal-medya/ipek-ersan.jpg", stil: "" },
+            { isim: "Sıradan Hareket", fotograf: "../assets/aday2026/sosyal-medya/siradan-hareket.jpg", stil: "" },
+            { isim: "Nil'in İzleri", fotograf: "../assets/aday2026/sosyal-medya/nil-in-izleri.jpg", stil: "" },
+            { isim: "Yunus Canpolat", fotograf: "../assets/aday2026/sosyal-medya/yunus-canpolat.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Dijital Talk Show",
+        kategoriId: "talk-show",
+        adaylar: [
+            { isim: "Berfu Yenenler ile Talk Show Perileri", fotograf: "../assets/aday2026/talk-show/berfu-yenenler-ile-talk-show-perileri.jpg", stil: "" },
+            { isim: "Hayrettin ile Kaos Show", fotograf: "../assets/aday2026/talk-show/hayrettin-ile-kaos-show.jpg", stil: "" },
+            { isim: "Melis İşiten ile Zaten Şov", fotograf: "../assets/aday2026/talk-show/melis-isiten-ile-zaten-sov.png", stil: "background-color: #FFF;" },
+            { isim: "Tıraş Show", fotograf: "../assets/aday2026/talk-show/tiras-show.jpg", stil: "" },
+            { isim: "İbrahim Selim ile Bu Gece", fotograf: "../assets/aday2026/talk-show/ibrahim-selim-ile-bu-gece.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Yapay Zeka Girişimi",
+        kategoriId: "yapay-zeka",
+        adaylar: [
+            { isim: "Vispera", fotograf: "../assets/aday2026/yapay-zeka/vispera.png", stil: "background-color: #FFF;" },
+            { isim: "Virasoft", fotograf: "../assets/aday2026/yapay-zeka/virasoft.jpg", stil: "" },
+            { isim: "Mindra", fotograf: "../assets/aday2026/yapay-zeka/mindra.jpg", stil: "background-color: #FFF;" },
+            { isim: "Madlen", fotograf: "../assets/aday2026/yapay-zeka/madlen.png", stil: "background-color: #FFF;" }
+        ]
+    },
+    {
+        kategori: "En İyi Online Yayıncı",
+        kategoriId: "online-yayinci",
+        adaylar: [
+            { isim: "Tssigalko", fotograf: "../assets/aday2026/online-yayinci/tssigalko.jpg", stil: "" },
+            { isim: "Kaanflix", fotograf: "../assets/aday2026/online-yayinci/kaanflix.jpg", stil: "" },
+            { isim: "Hasan Arda Kaşıkçı", fotograf: "../assets/aday2026/online-yayinci/hasan-arda-kasikci.jpg", stil: "" },
+            { isim: "Yağmur Dilaveroğlu (Blush)", fotograf: "../assets/aday2026/online-yayinci/yagmur-dilaveroglu-blush.jpg", stil: "" },
+            { isim: "Roseheuss Begüm", fotograf: "../assets/aday2026/online-yayinci/roseheuss-begum.jpg", stil: "" },
+            { isim: "Prenses Perver", fotograf: "../assets/aday2026/online-yayinci/prenses-perver.jpg", stil: "" },
+            { isim: "Gökhan Öner", fotograf: "../assets/aday2026/online-yayinci/gokhan-oner.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Teknoloji İçerik Üreticisi",
+        kategoriId: "teknoloji",
+        adaylar: [
+            { isim: "Ada Büyük", fotograf: "../assets/aday2026/teknoloji/ada-buyuk.jpg", stil: "" },
+            { isim: "Ahmet Emre Sakarya", fotograf: "../assets/aday2026/teknoloji/ahmet-emre-sakarya.jpg", stil: "" },
+            { isim: "Selman Bozkır", fotograf: "../assets/aday2026/teknoloji/selman-bozkir.jpg", stil: "" },
+            { isim: "Mert Bayantemur", fotograf: "../assets/aday2026/teknoloji/mert-bayantemur.jpg", stil: "" },
+            { isim: "Mehmet Üzüm", fotograf: "../assets/aday2026/teknoloji/mehmet-uzum.jpg", stil: "" },
+            { isim: "Şahan Öztekin", fotograf: "../assets/aday2026/teknoloji/sahan-oztekin.jpg", stil: "" },
+            { isim: "Mendebur Lemur", fotograf: "../assets/aday2026/teknoloji/mendebur-lemur.jpg", stil: "" },
+            { isim: "Samet Jankoviç", fotograf: "../assets/aday2026/teknoloji/samet-jankovic.jpg", stil: "" }
+        ]
+    },
+    {
+        kategori: "En İyi Siber Güvenlik Şirketi",
+        kategoriId: "siber-guvenlik",
+        adaylar: [
+            { isim: "Picus Security", fotograf: "../assets/aday2026/siber-guvenlik/picus-security.png", stil: "background-color: #FFF;" },
+            { isim: "Cyberwise", fotograf: "../assets/aday2026/siber-guvenlik/cyberwise.png", stil: "background-color: #FFF;" },
+            { isim: "Kaspersky", fotograf: "../assets/aday2026/siber-guvenlik/kaspersky.jpg", stil: "background-color: #FFF;" }
+        ]
+    }
 ];
+
+// Node / test ortamları için
+if (typeof module !== 'undefined' && module.exports) { module.exports = ADAYLAR_DATA; }

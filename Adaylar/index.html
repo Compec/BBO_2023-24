@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        <link rel="stylesheet" href="styles.css?v=20251218">
+        <meta name="description" content="COMPEC Bilişim Ödülleri 2026 adayları — 15 kategoride yarışan tüm adaylar.">
+        <link rel="stylesheet" href="styles.css?v=2026a">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="../assets/favicon/site.webmanifest">
-        <title>Boğaziçi Bilişim Ödülleri - Adaylar</title>
-        <script src="../adaylar-data.js?v=202512121"></script>
+        <title>COMPEC Bilişim Ödülleri - Adaylar</title>
+        <script src="../site-config.js?v=2026a"></script>
+        <script src="../adaylar-data.js?v=2026a"></script>
+        <script src="../nav.js?v=2026a"></script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-369ZRVNDT0"></script>
@@ -25,7 +28,7 @@
     <body>
         <header>
             <div class="logo">
-                <a href="../index.html"><img src="../assets/bbologo.png" alt="BBO_Logo"></a>
+                <a href="../index.html"><img src="../assets/bbologo.png" alt="COMPEC Bilişim Ödülleri"></a>
             </div>
             <nav>
                 <input type="checkbox" id="nav-check">
@@ -38,25 +41,25 @@
                 </div>
                 <ul id="nav-links">
                     <li><a href="../index.html">Anasayfa</a></li>
-                    <li><a href="./index.html">2025 Adayları</a></li>
-                    <li style="opacity: 0.5; pointer-events: none;"><a href="#" onclick="return false;">Oylama (Bitti)</a></li>
-                    <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
-                    <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="../assets/instagram.png" alt="instagram"></a>
+                    <li><a href="./index.html">2026 Adayları</a></li>
+                    <li id="nav-oylama"><a href="../Oylama/index.html">Oylama</a></li>
+                    <li id="nav-bilet" style="display:none;"><a href="#" target="_blank">Bilet Al!</a></li>
+                    <a id="nav-instagram" href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="../assets/instagram.png" alt="instagram"></a>
                 </ul>
             </nav>
         </header>
-<!-- testt -->
+
         <main>
             <!-- Adaylar buraya dinamik olarak yüklenecek -->
         </main>
 
-        <script src="script.js?v=202512121"></script>
+        <script src="script.js?v=2026a"></script>
 
         <footer>
             <img class="compeclogo" src="../assets/compeclogo.png" alt="COMPEC_Logo">
-            <p id="logo_exp">©2025 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
-                <br>Etkinliğin tüm hakları Compec'e aittir 
-                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>           
+            <p id="logo_exp">©2026 Boğaziçi Üniversitesi Bilişim Kulübü (COMPEC) tüm hakkı saklıdır.®
+                <br>Etkinliğin tüm hakları COMPEC'e aittir
+                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>
         </footer>
     </body>
 </html>

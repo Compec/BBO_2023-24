@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        <link rel="stylesheet" href="styles.css?v=20251218">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="styles.css?v=2026a">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="../assets/favicon/site.webmanifest">
-        <title>Boğaziçi Bilişim Ödülleri - Oylama</title>
-        <!-- testt -->
-        <!-- Firebase SDK -->
-        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-        
-        <!-- Firebase Config -->
-        <script src="firebase-config.js?v=202512121"></script>
-        
-        <!-- FingerprintJS kütüphanesi - Cihaz parmak izi için -->
+        <title>COMPEC Bilişim Ödülleri - Oylama</title>
+
+        <!-- Cihaz parmak izi -->
         <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
-        <script src="../adaylar-data.js?v=202512121"></script>
+
+        <script src="../site-config.js?v=2026a"></script>
+        <script src="../adaylar-data.js?v=2026a"></script>
+        <script src="../nav.js?v=2026a"></script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-369ZRVNDT0"></script>
@@ -36,7 +33,7 @@
     <body>
         <header>
             <div class="logo">
-                <a href="../index.html"><img src="../assets/bbologo.png" alt="BBO_Logo"></a>
+                <a href="../index.html"><img src="../assets/bbologo.png" alt="COMPEC Bilişim Ödülleri"></a>
             </div>
             <nav>
                 <input type="checkbox" id="nav-check">
@@ -49,56 +46,55 @@
                 </div>
                 <ul id="nav-links">
                     <li><a href="../index.html">Anasayfa</a></li>
-                    <li><a href="../Adaylar/index.html">2025 Adayları</a></li>
-                    <li><a href="./index.html">Oylama</a></li>
-                    <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
-                    <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="../assets/instagram.png" alt="instagram"></a>
+                    <li><a href="../Adaylar/index.html">2026 Adayları</a></li>
+                    <li id="nav-oylama"><a href="./index.html">Oylama</a></li>
+                    <li id="nav-bilet" style="display:none;"><a href="#" target="_blank">Bilet Al!</a></li>
+                    <a id="nav-instagram" href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="../assets/instagram.png" alt="instagram"></a>
                 </ul>
             </nav>
         </header>
 
         <section id="form">
-            <div class="container active" id="welcomePage">
-                <div>
-                    <h2>🎉 Oylama Sona Erdi!</h2>
-                    <p>2025 Boğaziçi Bilişim Ödülleri oylaması tamamlanmıştır. 🏆</p>
-                    <p>Katılımınız için teşekkür ederiz! 🙌</p>
-                    <p>Ödül törenimize bekleriz! 🎊</p>
-                    <br>
-                    <a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" class="btn" target="_blank">🎟️ Bilet Al!</a>
+            <!-- Oylama kapalı / zaten oy kullanılmış / hata durumları -->
+            <div class="container" id="bilgiEkrani" style="display:none;">
+                <div class="already-voted-message">
+                    <h3 id="bilgiBaslik"></h3>
+                    <p id="bilgiMetin"></p>
+                    <div id="bilgiButonlari" style="margin-top:24px;"></div>
                 </div>
             </div>
 
-            <div class="container" id="step1" style="display: none;">
-                <form id="multiStepForm">
-                    <div id="questionsContainer">
-                        <!-- Sorular buraya dinamik olarak yüklenecek -->
-                    </div>
-                    
+            <!-- Oylama formu -->
+            <div class="container" id="oylamaEkrani" style="display:none;">
+                <form id="oylamaFormu">
+                    <div id="sorular"><!-- kategoriler dinamik olarak eklenir --></div>
+
+                    <div id="turnstileKutusu" style="display:none; justify-content:center; margin:24px 0;"></div>
+
                     <div class="navigation-buttons">
-                        <button type="button" id="prevButton" onclick="navigate(-1)" style="display: none;">← Geri</button>
-                        <button type="button" id="nextButton" onclick="navigate(1)">İleri →</button>
+                        <button type="button" id="geriButonu" style="display:none;">← Geri</button>
+                        <button type="button" id="ileriButonu">İleri →</button>
                     </div>
 
                     <div class="progress-bar-container">
                         <div id="progress-bar" class="progress-bar"></div>
-                        <span id="progress-text" class="progress-text">Soru 1 / 18</span>
+                        <span id="progress-text" class="progress-text"></span>
                     </div>
 
                     <div class="button-container">
-                        <button type="submit" id="submitButton" style="display: none;">🗳️ Oyları Gönder</button>
+                        <button type="submit" id="gonderButonu" style="display:none;">🗳️ Oyları Gönder</button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <script src="script.js?v=20251212"></script>
+        <script src="script.js?v=2026a"></script>
 
         <footer>
             <img class="compeclogo" src="../assets/compeclogo.png" alt="COMPEC_Logo">
-            <p id="logo_exp">©2025 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
-                <br>Etkinliğin tüm hakları Compec'e aittir 
-                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>           
+            <p id="logo_exp">©2026 Boğaziçi Üniversitesi Bilişim Kulübü (COMPEC) tüm hakkı saklıdır.®
+                <br>Etkinliğin tüm hakları COMPEC'e aittir
+                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>
         </footer>
     </body>
 </html>

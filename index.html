@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        <link rel="stylesheet" href="styles.css?v=20251218a">
+        <meta name="description" content="COMPEC Bilişim Ödülleri, Boğaziçi Üniversitesi Bilişim Kulübü COMPEC tarafından düzenlenen, bilişim sektörünün enlerinin halk ve jüri oylarıyla belirlendiği prestijli ödül gecesidir.">
+        <link rel="stylesheet" href="styles.css?v=2026a">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="./assets/favicon/site.webmanifest">
-        <title>Boğaziçi Bilişim Ödülleri</title>
+        <title>COMPEC Bilişim Ödülleri</title>
+        <script src="site-config.js?v=2026a"></script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-369ZRVNDT0"></script>
@@ -24,7 +26,7 @@
     <body>
         <header>
             <div class="logo">
-                <a href="./index.html"><img src="./assets/bbologo.png" alt="BBO_Logo"></a>
+                <a href="./index.html"><img src="./assets/bbologo.png" alt="COMPEC Bilişim Ödülleri"></a>
             </div>
             <nav>
                 <input type="checkbox" id="nav-check">
@@ -37,61 +39,102 @@
                 </div>
                 <ul id="nav-links">
                     <li><a href="./index.html">Anasayfa</a></li>
-                    <li><a href="./Adaylar/index.html">2025 Adayları</a></li>
-                    <li style="opacity: 0.5; pointer-events: none;"><a href="#" onclick="return false;">Oylama (Bitti)</a></li>
-                    <li><a href="https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670" target="_blank">Bilet Al!</a></li>
-                    <a href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="./assets/instagram.png" alt="instagram"></a>
+                    <li><a href="./Adaylar/index.html">2026 Adayları</a></li>
+                    <li id="nav-oylama"><a href="./Oylama/index.html">Oylama</a></li>
+                    <li id="nav-bilet" style="display:none;"><a href="#" target="_blank">Bilet Al!</a></li>
+                    <a id="nav-instagram" href="https://www.instagram.com/bogazicibilisimodulleri/" target="_blank"><img class="instalogo" src="./assets/instagram.png" alt="instagram"></a>
                 </ul>
             </nav>
         </header>
-<!-- testt -->
+
         <div id="row">
             <div id="main_left_part">
-                <img class="beyaz_yazi" src="./assets/arka yüz copy 10.png" alt="Boğaziçi Bilişim Ödülleri">
-                <p class="nedir">Boğaziçi Bilişim Ödülleri, Boğaziçi Üniversitesi Bilişim Kulübü COMPEC'in bu sene on 
-                    üçüncüsünü düzenleyeceği, halk, jüri ve bilişim kulüplerinin oylarının alındığı süreç sonunda, 
-                    bilişim sektöründe faaliyet gösteren kişi ve kuruluşların enlerinin ödüllerine kavuştuğu prestijli ve 
+                <img class="beyaz_yazi" src="./assets/compec-bilisim-odulleri.png" alt="COMPEC Bilişim Ödülleri">
+                <p class="nedir">COMPEC Bilişim Ödülleri, Boğaziçi Üniversitesi Bilişim Kulübü COMPEC'in bu sene
+                    on dördüncüsünü düzenleyeceği, halk, jüri ve bilişim kulüplerinin oylarının alındığı süreç sonunda,
+                    bilişim sektöründe faaliyet gösteren kişi ve kuruluşların enlerinin ödüllerine kavuştuğu prestijli ve
                     gösterişli ödül gecesidir.
                 </p>
             </div>
         </div>
 
-        <div class="garagara">  
-            <button class="btn" id="biletal" onclick='window.open("https://www.biletimgo.com/etkinlik/bogazici-bilisim-odulleri-20670")'>🎟️ Bilet Al!</button>
+        <div class="garagara">
+            <a class="btn" id="oyver" href="./Oylama/index.html">🗳️ Oy Ver!</a>
+            <button class="btn" id="biletal" style="display:none;">🎟️ Bilet Al!</button>
         </div>
 
         <div style="text-align: center;">
             <div id="countdown" class="timer"></div>
         </div>
-             
-        <footer> 
+
+        <footer>
             <img class="compeclogo" src="./assets/compeclogo.png" alt="COMPEC_Logo">
-            <p id="logo_exp">©2025 Boğaziçi Üniversitesi Bilişim Kulübü (Compec) tüm hakkı saklıdır.®
-                <br>Etkinliğin tüm hakları Compec'e aittir 
-                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>           
+            <p id="logo_exp">©2026 Boğaziçi Üniversitesi Bilişim Kulübü (COMPEC) tüm hakkı saklıdır.®
+                <br>Etkinliğin tüm hakları COMPEC'e aittir
+                ve etkinliği haber vermeksizin değiştirme yetkisini elinde tutar.</p>
         </footer>
 
         <script>
-            // Countdown timer for voting
-            const countdownDate = new Date("Dec 20, 2025 23:59:59").getTime();
-            const interval = setInterval(function() {
-                const now = new Date().getTime();
-                const remainingTime = countdownDate - now;
+            (function () {
+                const cfg = SITE_CONFIG;
 
-                const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-
-                document.getElementById("countdown").innerHTML = 
-                    "⏱️ Son " + days + " gün, " + hours + " saat, " + minutes + " dakika!";
-
-                if (remainingTime <= 0) {
-                    clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "🎉 Oylama sona erdi!";
-                    document.getElementById("oyver").style.display = "none";
-                    document.getElementById("biletal").style.display = "inline-flex";
+                // ── Bilet linki ──────────────────────────────
+                if (cfg.biletUrl) {
+                    const navBilet = document.getElementById('nav-bilet');
+                    navBilet.style.display = '';
+                    navBilet.querySelector('a').href = cfg.biletUrl;
+                    const btn = document.getElementById('biletal');
+                    btn.style.display = 'inline-flex';
+                    btn.onclick = function () { window.open(cfg.biletUrl, '_blank'); };
                 }
-            }, 1000);
+
+                // ── Instagram ────────────────────────────────
+                document.getElementById('nav-instagram').href = cfg.instagramUrl;
+
+                // ── Oylama durumu ────────────────────────────
+                const oyBtn = document.getElementById('oyver');
+                const navOylama = document.getElementById('nav-oylama');
+                const sayac = document.getElementById('countdown');
+
+                function oylamaDurumu() {
+                    const simdi = Date.now();
+                    const baslangic = new Date(cfg.oylamaBaslangic).getTime();
+                    const bitis = new Date(cfg.oylamaBitis).getTime();
+                    if (cfg.oylamaKapaliMi || simdi > bitis) return 'bitti';
+                    if (simdi < baslangic) return 'baslamadi';
+                    return 'acik';
+                }
+
+                function kalanSure(hedef) {
+                    const fark = hedef - Date.now();
+                    const gun = Math.floor(fark / 86400000);
+                    const saat = Math.floor((fark % 86400000) / 3600000);
+                    const dakika = Math.floor((fark % 3600000) / 60000);
+                    return gun + ' gün, ' + saat + ' saat, ' + dakika + ' dakika';
+                }
+
+                function guncelle() {
+                    const durum = oylamaDurumu();
+                    if (durum === 'bitti') {
+                        sayac.innerHTML = '🎉 Oylama sona erdi!';
+                        oyBtn.style.display = 'none';
+                        navOylama.style.opacity = '0.5';
+                        navOylama.style.pointerEvents = 'none';
+                        navOylama.querySelector('a').textContent = 'Oylama (Bitti)';
+                    } else if (durum === 'baslamadi') {
+                        sayac.innerHTML = '⏱️ Oylama başlamasına ' +
+                            kalanSure(new Date(cfg.oylamaBaslangic).getTime()) + ' kaldı!';
+                        oyBtn.style.display = 'none';
+                    } else {
+                        sayac.innerHTML = '⏱️ Oy vermek için son ' +
+                            kalanSure(new Date(cfg.oylamaBitis).getTime()) + '!';
+                        oyBtn.style.display = 'inline-flex';
+                    }
+                }
+
+                guncelle();
+                setInterval(guncelle, 1000);
+            })();
         </script>
     </body>
 </html>
