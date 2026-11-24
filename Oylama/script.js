@@ -365,7 +365,7 @@
             '<div class="thank-you-container active">' +
             '<h2>🎉 Teşekkürler!</h2>' +
             '<p>Oyların kaydedildi.</p>' +
-            '<p>Ödül törenimizde görüşmek üzere! 🙌</p>' +
+            '<p>' + SITE_CONFIG.etkinlikTarihiMetni() + ' tarihindeki ödül törenimizde görüşmek üzere! 🙌</p>' +
             (SITE_CONFIG.biletUrl
                 ? '<br><button type="button" onclick="window.open(\'' + SITE_CONFIG.biletUrl + '\',\'_blank\')">🎟️ Bilet Al!</button>'
                 : '') +
@@ -390,7 +390,9 @@
                 Date.now() > new Date(SITE_CONFIG.oylamaBitis).getTime();
             if (bittiMi) {
                 bilgiGoster('🎉 Oylama Sona Erdi!',
-                    'COMPEC Bilişim Ödülleri oylaması tamamlanmıştır.<br>Katılımınız için teşekkür ederiz!',
+                    'COMPEC Bilişim Ödülleri oylaması tamamlanmıştır.<br>' +
+                    'Katılımınız için teşekkür ederiz!<br><br>' +
+                    '🏆 Ödül töreni: <strong>' + SITE_CONFIG.etkinlikTarihiMetni() + '</strong>',
                     biletButonu());
             } else {
                 const baslangic = new Date(SITE_CONFIG.oylamaBaslangic);

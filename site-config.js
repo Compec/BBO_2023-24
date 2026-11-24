@@ -11,6 +11,11 @@ const SITE_CONFIG = {
     etkinlikAdi: 'COMPEC Bilişim Ödülleri',
     yil: 2026,
 
+    // Ödül töreninin tarihi ve saati.
+    // Oylama bittikten sonra anasayfadaki sayaç bu tarihe geri sayar.
+    // Saat şimdilik tahmini — kesinleşince buradan değiştir.
+    etkinlikTarihi: '2026-12-06T20:00:00',
+
     // Bilet satış linki. Boş bırakılırsa "Bilet Al!" butonları gizlenir.
     biletUrl: '',
 
@@ -21,7 +26,7 @@ const SITE_CONFIG = {
     // Oylamanın açılacağı ve kapanacağı an (tarayıcının yerel saati).
     // Oylama sayfası bu aralığın dışında otomatik olarak kapalı görünür.
     oylamaBaslangic: '2026-11-24T00:00:00',
-    oylamaBitis:     '2026-12-20T23:59:59',
+    oylamaBitis:     '2026-12-03T23:59:59',
 
     // Acil durum anahtarı: true yapılırsa tarihten bağımsız olarak oylama kapanır.
     oylamaKapaliMi: false,
@@ -41,6 +46,13 @@ const SITE_CONFIG = {
     // Cloudflare Turnstile site anahtarı (bot koruması).
     // Boş bırakılırsa Turnstile devre dışı kalır, oylama yine çalışır.
     turnstileSiteKey: ''
+};
+
+// Etkinlik tarihini "6 Aralık 2026" biçiminde döndürür.
+SITE_CONFIG.etkinlikTarihiMetni = function () {
+    return new Date(this.etkinlikTarihi).toLocaleDateString('tr-TR', {
+        day: 'numeric', month: 'long', year: 'numeric'
+    });
 };
 
 // Oylamanın şu anda açık olup olmadığını döndürür.

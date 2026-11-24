@@ -124,19 +124,40 @@ delete from public.oy_pusulalari where id = 'PUSULA_ID';
 
 ---
 
-## Oylamayı kapatma
+## Takvim
 
-İki anahtar bağımsız çalışır, **bitirirken ikisini birden kapat**.
+| | |
+|---|---|
+| Oylama bitişi | **3 Aralık 2026, 23:59** |
+| Ödül töreni | **6 Aralık 2026** |
 
-Sunucu (asıl güvenlik anahtarı):
+Oylama **tam zamanında kendiliğinden kapanır** — elle bir şey yapmana gerek yok.
+Bitiş tarihi hem sitede hem sunucuda tanımlı:
+
+* Site — `site-config.js` → `oylamaBitis`
+* Sunucu — `ayarlar.oylama_bitis` (Türkiye saati, UTC+3)
+
+Tarihi değiştirirsen **ikisini birlikte** güncelle:
+
+```sql
+update public.ayarlar set deger = '"2026-12-03T23:59:59+03:00"'::jsonb
+where anahtar = 'oylama_bitis';
+```
+
+Ödül töreni tarihi de `site-config.js` → `etkinlikTarihi` alanında. Oylama bitince
+anasayfadaki sayaç otomatik olarak bu tarihe geri saymaya başlar. (Saat şimdilik
+20:00 varsayıldı; kesinleşince değiştir.)
+
+### Acil durumda erken kapatma
+
+Sunucu:
 ```sql
 update public.ayarlar set deger = 'false'::jsonb where anahtar = 'oylama_acik';
 ```
 
 Site — `site-config.js`:
 ```js
-oylamaBitis:    '2026-12-20T23:59:59',
-oylamaKapaliMi: true    // acil durumda, tarihten bağımsız kapatır
+oylamaKapaliMi: true    // tarihten bağımsız kapatır
 ```
 
 ---
