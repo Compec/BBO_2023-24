@@ -51,7 +51,8 @@ const ADAYLAR_DATA = [
         adaylar: [
             { isim: "Raid Rush", fotograf: "../assets/aday2026/mobil-oyun/raid-rush.png", stil: "" },
             { isim: "TC Simülasyonu", fotograf: "../assets/aday2026/mobil-oyun/tc-simulasyonu.jpg", stil: "" },
-            { isim: "Arcane Arena", fotograf: "../assets/aday2026/mobil-oyun/arcane-arena.png", stil: "" }
+            { isim: "Arcane Arena", fotograf: "../assets/aday2026/mobil-oyun/arcane-arena.png", stil: "" },
+            { isim: "Rise Online Mobile", fotograf: "../assets/aday2026/mobil-oyun/rise-online.jpg", stil: "" }
         ]
     },
     {

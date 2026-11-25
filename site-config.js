@@ -2,7 +2,7 @@
 // COMPEC BİLİŞİM ÖDÜLLERİ — SİTE AYARLARI
 // ══════════════════════════════════════════════════════════
 // Sitenin tamamı bu dosyadaki değerleri kullanır.
-// Tarih, bilet linki, oylama durumu gibi şeyleri değiştirmek için
+// Tarih, kayıt linki, oylama durumu gibi şeyleri değiştirmek için
 // yalnızca bu dosyayı düzenlemen yeterli — HTML'e dokunmana gerek yok.
 // ══════════════════════════════════════════════════════════
 
@@ -16,8 +16,8 @@ const SITE_CONFIG = {
     // Saat şimdilik tahmini — kesinleşince buradan değiştir.
     etkinlikTarihi: '2026-12-06T20:00:00',
 
-    // Bilet satış linki. Boş bırakılırsa "Bilet Al!" butonları gizlenir.
-    biletUrl: '',
+    // Ücretsiz kayıt formu. Boş bırakılırsa kayıt butonları gizlenir.
+    kayitUrl: 'https://forms.gle/Lziqm4tipXjNEKBKA',
 
     // Instagram hesabı
     instagramUrl: 'https://www.instagram.com/bogazicibilisimodulleri/',

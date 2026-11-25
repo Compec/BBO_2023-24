@@ -9,11 +9,11 @@
     document.addEventListener('DOMContentLoaded', function () {
         const cfg = SITE_CONFIG;
 
-        // Bilet linki — tanımlıysa menüde göster
-        const navBilet = document.getElementById('nav-bilet');
-        if (navBilet && cfg.biletUrl) {
-            navBilet.style.display = '';
-            navBilet.querySelector('a').href = cfg.biletUrl;
+        // Kayıt linki — tanımlıysa menüde göster
+        const navKayit = document.getElementById('nav-kayit');
+        if (navKayit && cfg.kayitUrl) {
+            navKayit.style.display = '';
+            navKayit.querySelector('a').href = cfg.kayitUrl;
         }
 
         // Instagram

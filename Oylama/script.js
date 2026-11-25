@@ -48,9 +48,9 @@
         ekranGoster('bilgi');
     }
 
-    function biletButonu() {
-        return SITE_CONFIG.biletUrl
-            ? [{ metin: '🎟️ Bilet Al!', url: SITE_CONFIG.biletUrl, yeniSekme: true }]
+    function kayitButonu() {
+        return SITE_CONFIG.kayitUrl
+            ? [{ metin: '📝 Ücretsiz Kayıt Ol', url: SITE_CONFIG.kayitUrl, yeniSekme: true }]
             : [{ metin: '← Anasayfaya dön', url: '../index.html' }];
     }
 
@@ -366,8 +366,8 @@
             '<h2>🎉 Teşekkürler!</h2>' +
             '<p>Oyların kaydedildi.</p>' +
             '<p>' + SITE_CONFIG.etkinlikTarihiMetni() + ' tarihindeki ödül törenimizde görüşmek üzere! 🙌</p>' +
-            (SITE_CONFIG.biletUrl
-                ? '<br><button type="button" onclick="window.open(\'' + SITE_CONFIG.biletUrl + '\',\'_blank\')">🎟️ Bilet Al!</button>'
+            (SITE_CONFIG.kayitUrl
+                ? '<br><button type="button" onclick="window.open(\'' + SITE_CONFIG.kayitUrl + '\',\'_blank\')">📝 Ücretsiz Kayıt Ol</button>'
                 : '') +
             '</div>';
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -377,7 +377,7 @@
         bilgiGoster(
             '✅ Oyun zaten kaydedildi',
             'Bu cihazdan daha önce oy kullanılmış. Her cihaz yalnızca bir kez oy verebilir.',
-            biletButonu()
+            kayitButonu()
         );
     }
 
@@ -393,7 +393,7 @@
                     'COMPEC Bilişim Ödülleri oylaması tamamlanmıştır.<br>' +
                     'Katılımınız için teşekkür ederiz!<br><br>' +
                     '🏆 Ödül töreni: <strong>' + SITE_CONFIG.etkinlikTarihiMetni() + '</strong>',
-                    biletButonu());
+                    kayitButonu());
             } else {
                 const baslangic = new Date(SITE_CONFIG.oylamaBaslangic);
                 bilgiGoster('⏳ Oylama Henüz Başlamadı',

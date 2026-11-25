@@ -81,7 +81,8 @@ select k.id, v.slug, v.ad, v.gorsel, v.sira
 from public.kategoriler k, (values
     ('raid-rush', 'Raid Rush', 'assets/aday2026/mobil-oyun/raid-rush.png', 0),
     ('tc-simulasyonu', 'TC Simülasyonu', 'assets/aday2026/mobil-oyun/tc-simulasyonu.jpg', 1),
-    ('arcane-arena', 'Arcane Arena', 'assets/aday2026/mobil-oyun/arcane-arena.png', 2)
+    ('arcane-arena', 'Arcane Arena', 'assets/aday2026/mobil-oyun/arcane-arena.png', 2),
+    ('rise-online', 'Rise Online Mobile', 'assets/aday2026/mobil-oyun/rise-online.jpg', 3)
 ) as v(slug, ad, gorsel, sira)
 where k.slug = 'mobil-oyun'
 on conflict (kategori_id, slug) do update
