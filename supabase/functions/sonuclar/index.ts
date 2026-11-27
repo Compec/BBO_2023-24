@@ -40,6 +40,12 @@ function esitMi(a: string, b: string): boolean {
     return fark === 0;
 }
 
+function istemciIp(req: Request): string {
+    const xff = req.headers.get('x-forwarded-for');
+    if (xff) return xff.split(',')[0].trim();
+    return req.headers.get('cf-connecting-ip') ?? 'bilinmiyor';
+}
+
 Deno.serve(async (req: Request) => {
     if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
 
@@ -51,6 +57,24 @@ Deno.serve(async (req: Request) => {
         Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
         { auth: { persistSession: false } },
     );
+
+    let tuz = Deno.env.get('IP_SALT');
+    if (!tuz) {
+        const { data } = await supabase.from('ayarlar').select('deger').eq('anahtar', 'ip_tuzu').single();
+        tuz = (data?.deger as string) ?? '';
+    }
+    if (!tuz) return json({ ok: false, hata: 'sunucu_yapilandirmasi' }, 500);
+
+    // Sınır anahtar kontrolünden önce uygulanır; kilitliyken doğru anahtar da 429 alır.
+    // Aksi halde 401/200 farkı deneme sınırını anlamsız kılardı.
+    // 'admin|' öneki, bu özetin oy pusulalarındaki ip_hash ile eşleştirilmesini engeller.
+    const ipHash = await sha256('admin|' + istemciIp(req) + '|' + tuz);
+    const deneme = await supabase.rpc('admin_deneme_kaydet', { p_ip_hash: ipHash });
+    if (deneme.error) {
+        console.error('admin_deneme_kaydet hatası:', deneme.error.message);
+        return json({ ok: false, hata: 'sunucu_yapilandirmasi' }, 500);
+    }
+    if (deneme.data !== true) return json({ ok: false, hata: 'cok_fazla_deneme' }, 429);
 
     const ortamAnahtari = Deno.env.get('ADMIN_KEY');
     let gecerli = false;
@@ -66,6 +90,8 @@ Deno.serve(async (req: Request) => {
     }
 
     if (!gecerli) return json({ ok: false, hata: 'yetkisiz' }, 401);
+
+    await supabase.from('admin_denemeleri').delete().eq('ip_hash', ipHash);
 
     const [sonuclar, ozet] = await Promise.all([
         supabase.from('sonuclar').select('*'),

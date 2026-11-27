@@ -15,8 +15,12 @@
         <link rel="manifest" href="../assets/favicon/site.webmanifest">
         <title>COMPEC Bilişim Ödülleri - Oylama</title>
 
-        <!-- Cihaz parmak izi -->
-        <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+
+        <!-- Cihaz parmak izi. Sürüm sabit ve SRI'lı: CDN'deki dosya değişirse tarayıcı çalıştırmaz. -->
+        <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3.4.2/dist/fp.min.js"
+                integrity="sha384-RGoAjUH4gJ40bAD0YPezgdsNOCbBWQlNwdWfA981c/7NgIyqm+TeAelFv346J7UO"
+                crossorigin="anonymous"></script>
 
         <script src="../site-config.js?v=2026d"></script>
         <script src="../adaylar-data.js?v=2026d"></script>
