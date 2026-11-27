@@ -78,8 +78,10 @@ Katmanlar, en dıştan içe:
    ayrı jeton alıp beklemek gerekir.
 2. **Jeton üretim limiti.** Aynı IP saatte en fazla **150** jeton alabilir.
 3. **Cihaz tekliği.** Aynı cihaz parmak izinden ikinci oy kabul edilmez (veritabanı
-   seviyesinde `unique` kısıt — eş zamanlı iki istek bile geçemez). Asıl mükerrer
-   oy engeli budur.
+   seviyesinde `unique` kısıt — eş zamanlı iki istek bile geçemez). Parmak izini
+   tarayıcı üretip gönderir, sunucu doğrulayamaz: dürüst seçmenin yanlışlıkla iki
+   kez oy vermesini engeller, API'ye doğrudan istek atan birini engellemez.
+   Otomasyona karşı asıl engel Turnstile ve IP limitidir.
 4. **IP limiti.** Aynı ağdan 24 saatte en fazla **30** pusula. Bu sayı bilerek
    yüksek: kampüs WiFi'ı ve mobil operatörler yüzlerce kişiyi tek IP'nin arkasına
    koyar, düşük bir limit gerçek seçmenleri engellerdi. Suistimal görürsen
@@ -88,7 +90,11 @@ Katmanlar, en dıştan içe:
    kategoriye ait olmalı; uydurma aday slug'ı reddedilir.
 6. **CORS.** `oy-ver` ve `oy-baslat` yalnızca `bogazicibilisimodulleri.com`,
    `www.` sürümü ve localhost origin'lerine yanıt verir.
-7. **Turnstile** (isteğe bağlı, şu an kapalı) — aşağıya bak.
+7. **Turnstile** (şu an kapalı, açılması önerilir) — aşağıya bak. Kapalıyken
+   otomasyonu yavaşlatan tek şey 20 saniyelik jeton beklemesidir.
+8. **Yönetici anahtarı deneme sınırı.** `sonuclar` uç noktası IP başına 15 dakikada
+   5 denemeden sonra 429 döner (doğru anahtar gelse bile). Doğru anahtar sayacı
+   sıfırlar. Kilidi elle açmak için: `truncate public.admin_denemeleri;`
 
 Ayarları değiştirmek:
 
@@ -110,6 +116,16 @@ from public.oy_pusulalari group by ip_hash having count(*) > 1 order by 2 desc;
 select date_trunc('minute', olusturma) dk, count(*)
 from public.oy_pusulalari group by 1 order by 1 desc limit 60;
 
+-- IP limitine dayanmış ağlar (limit 30 ise 25+ pusula)
+select ip_hash, count(*), count(distinct user_agent) ua, count(distinct ekran) ekran
+from public.oy_pusulalari where olusturma > now() - interval '24 hours'
+group by ip_hash having count(*) >= 25 order by 2 desc;
+
+-- Parmak izi biçimine uymayan cihaz kimlikleri (FingerprintJS 32 hex üretir,
+-- yedek kimlik "cihaz_" ile başlar)
+select count(*) from public.oy_pusulalari
+where cihaz_id !~ '^[0-9a-f]{32}$' and cihaz_id not like 'cihaz\_%';
+
 -- Şüpheli bir pusulayı silmek (oyları da gider)
 delete from public.oy_pusulalari where id = 'PUSULA_ID';
 ```
@@ -121,6 +137,18 @@ delete from public.oy_pusulalari where id = 'PUSULA_ID';
 3. **Secret key** → Dashboard → Edge Functions → Secrets → `TURNSTILE_SECRET`
 
 İkisi de tanımlanmazsa oylama Turnstile olmadan çalışmaya devam eder.
+Önce secret'ı, sonra site key'i tanımla; ters sırada arada gönderilen oylar
+`bot_dogrulamasi_basarisiz` alır.
+
+### 0005 güvenlik sıkılaştırmasını devreye alma
+
+Sıra önemli — `sonuclar` fonksiyonu migration'daki `admin_deneme_kaydet()`
+olmadan 500 döner:
+
+1. SQL Editor'de `supabase/migrations/0005_guvenlik_sikilastirma.sql` dosyasını çalıştır.
+2. `sonuclar` Edge Function'ını yeniden deploy et.
+
+`oy-ver` ve `oy-baslat` kodunda değişiklik yok.
 
 ---
 
